@@ -47,7 +47,7 @@ DEST on ARCHER2
 ===================
 
 
-.. image:: ../../images/Nkk.png
+.. image:: ../../images/logo_dest.png
    :alt: Nektar++
    :target: https://www.nektar.info/
    :class: with-shadow
@@ -104,8 +104,8 @@ For more detailed approach please visit:
 
 DEST Installation
 ==================
-.. image:: ../../logo.png
-   :alt: FabNEPTUNE
+.. image:: ../../logo_dest.png
+   :alt: DEST
    :target: https://github.com/UCL-CCS/FabNEPTUNE
    :class: with-shadow
    :scale: 60
