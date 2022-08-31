@@ -3,13 +3,47 @@
 .. Installation
 .. ============
 
-Nektar++ configuration and build
+Modules 
+===================
+
+DEST is designed and implemented as a modular system in order to accommodate further additions and/or improvements to the currently available modelling techniques.  The implementation employs structured and object-oriented approaches to data management, fast memory access as well as vector and parallel processing technologies thus enabling rapid turnaround of numerical simulations comprised within computer aided engineering tasks. 
+
+ 
+This modularity starts from grouping the overall functionality into these key modules (each module should create a library upon compilation) 
+
+UTIL - fundamental library that provides interfaces to different computing platforms (Linux, Windows, macOS, etc.) 
+
+Note that some header files simply provide "redirection" to equivalent header files in various default folders on different platforms 
+
+Please make sure that anything platform dependent which you encounter during the development is discussed with the aim to implement such fundamental, platform dependent, functionality in this folder 
+
+UI - another fundamental library that provides the platform dependent functionality for Graphical User Interface that enables DEST_conveyor to appear on the screen and perform its functionality.  The underlying enabling library is Tcl/Tk.  This is one of DEST's vulnerabilities, as maintaining this functionality depends upon the availability and further development of the Tcl/Tk software which is being constantly being super-seeded by python or the availability of generic pre-post/processors such as GMESH and ParaView. 
+
+DBASE - this module is responsible for structing the memory and for input/output functionality that fills that memory from input data file, as well as outputs from that memory into output files - see:  Data flow 
+
+MESHGEN 
+
+DOMDEC 
+
+ANALYSER - This is, currently, an explicit DEM/FEM solver for direct modelling. 
+
+OPTIMISER - A simple optimisation package designed to run simultaneously many DEST_analyser runs and vary parameters that are labelled in all .dat files for the DEST_analyser runs in the same optimisation run.  Objective functions can be provided in different ways, as per documentation.  This is an inverse modelling tool. 
+
+CONVEYOR - GUI and "integration platform", designed to work closely with DEST_analysers and DEST_optimiser, but also to help with various interfacing and automation tasks. 
+
+ 
+
+The above is a "bottom-up" description, in terms of dependencies, but the interdependencies are sometimes a bit more complex than the above list suggests, though every effort should be made to keep the interdependencies as simple as possible. 
+
+
+
+DEST configuration and build
 ===================
 
 In the following we will provide an example on how to configure and build Nektar++ on a remote machine.
 
 
-Nektar++ on ARCHER2
+DEST on ARCHER2
 ===================
 
 
@@ -68,7 +102,7 @@ For more detailed approach please visit:
 		https://www.nektar.info/nektar-on-archer2/
     
 
-FabNEPTUNE Installation
+DEST Installation
 ==================
 .. image:: ../../logo.png
    :alt: FabNEPTUNE
@@ -119,197 +153,4 @@ For example:
     .. code-block:: console
 		
 		(base)user@login*:~> conda install somepy
-		
-		
-Installing EasyVVUQ
-==================
-.. image:: ../../images/esvvq.png
-   :alt: EasyVVUQ
-   :target: https://easyvvuq.readthedocs.io/en/dev/
-   :class: with-shadow
-   :scale: 20		
-		
-Next you need to install EasyVVUQ in your Miniconda environment to access it.
-You can install EasyVVUQ using:
-    .. code-block:: console
-		
-		(base)user@login*:~> pip install easyvvuq
 
-and upgrade the library using:
-    .. code-block:: console
-		
-		(base)user@login*:~> pip install easyvvuq --upgrade
-
-Where (base) can be replaced with your new conda environment
-
-For more detailed approach please visit:
-    .. code-block:: console
-		
-		https://github.com/UCL-CCS/EasyVVUQ
-
-
-Installing EasySurrogate
-==================		
-		
-Next you need to install EasySurrogate in your Miniconda environment to access it.
-You can install EasyVVUQ using:
-    .. code-block:: console
-		
-		(base)user@login*:~> pip install easysurrogate
-
-Where (base) can be replaced with your new conda environment
-
-For more detailed approach please visit:
-    .. code-block:: console
-		
-		https://github.com/wedeling/EasySurrogate
-		
-		
-Installing FabSim3
-==================
-.. image:: ../../images/fbs.png
-   :alt: FabSim3
-   :target: https://fabsim3.readthedocs.io/en/latest/
-   :class: with-shadow
-   :scale: 25
-
-Next you need to install FabSim3 somewhere in your directories and your Miniconda environment to access it.
-
-First you need to check if the following Python modules are already installed
-
-    .. code-block:: console
-		
-		fabric3==1.13.1.post1
-		PyYAML
-		numpy
-		ruamel.yaml
-		rich
-
-Then install both ruamel.yaml and rich package
-
-    .. code-block:: console
-		
-		pip3 install ruamel.yaml rich
-
-
-Once you have installed the required packages, then clone FabSim3 from the GitHub repository:
-
-    .. code-block:: console
-		
-		git clone https://github.com/djgroen/FabSim3.git
-		
-Finally change to your FabSim3 directory, and type		
-
-    .. code-block:: console
-		
-		(base)user@login*:~>python3 configure_fabsim.py
-
-Where (base) can be replaced with your new conda environment
-
-For more detailed approach please visit:
-    .. code-block:: console
-		
-		https://github.com/djgroen/FabSim3
-
-
-Installing QCG-PilotJob
-==================
-.. image:: ../../images/qcg-pj-logo.png
-   :alt: QCG-PilotJob
-   :target: https://qcg-pilotjob.readthedocs.io/en/develop/
-   :class: with-shadow
-   :scale: 25
-
-Next you need to install QCG-PilotJob somewhere in your Miniconda environment to access it.
-
-You can install QCG-PilotJob using:
-    .. code-block:: console
-		
-		(base)user@login*:~> pip install qcg-pilotjob
-
-and supplementary packages can be installed using:
-    .. code-block:: console
-		
-		(base)user@login*:~> pip install qcg-pilotjob-cmds
-		(base)user@login*:~> pip install qcg-pilotjob-executor-api
-
-Where (base) can be replaced with your new conda environment
-
-
-For more detailed approach please visit:
-    .. code-block:: console
-		
-		https://github.com/vecma-project/QCG-PilotJob
-
-
-Creating virtual environment
-==================
-
-Finally you need to create a new virtual environment, and update the following files:
-
-    .. code-block:: console
-		
-		convection_2d_easyvvuq_init_run_analyse_local.py
-                convection_2d_easyvvuq_init_run_analyse_remote.py
-		Convection2D_init_run_analyse_campaign_local
-		Convection2D_init_run_analyse_campaign_remote
-
-
-which  are found in ``plugins/FabNEPTUNE/config_files/convection_2d_easyvvuq_InRuAn*_QCGPJ`` and ``plugins/FabNEPTUNE/config_files/convection_2d_easyvvuq_easysurrogate_InRuAn*_DAS_QCGPJ`` and ``plugins/FabNEPTUNE/templates``
-
-This environment is used by EasyVVUQ campaign. For example if you want to execute the convection jobs on a remote machine do only the following:
-
-First, open the file "convection_2d_easyvvuq_init_run_analyse_remote.py" and modify it with your path (your virtual environment)
-
-     .. code-block:: console
-     
-                       ...
-                       with QCGPJPool(template_params={'venv': '/mnt/lustre/a2fswork2/work/e723/e723/kevinb/venv_kevin'}) as qcgpj:
-                       campaign.execute(pool=qcgpj).collate(progress_bar=True)
-                       ...
-
-
-and then open  "FabNEPTUNE/templates/Convection2D_init_run_analyse_campaign_remote" and modify it with your path (your python environment)
-
-     .. code-block:: console
-     
-                       ...
-                       /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/py38/bin/python3.8                        
-		       convection_2d_easyvvuq_init_run_analyse_remote.py     $machine_name    '$run_command_remote'   $convection_2d_exec
-                       ...
-
-
-.. Note:: If you  want to run FabNEPTUNE on your local machine and execute the convection jobs on a remote machine (e.g. fabsim  archer2 ...), you need to have the virtual environment on remote machine and you only need to have FabNEPTUNE installed on your local machine (no need for the additional installation of FabNEPTUNE on a remote machine!)
-
-
-You can install virtualenv using:
-    .. code-block:: console
-		
-		curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-                python3 get-pip.py --user
-                pip install --user virtualenv
-		
-		
-Then to create private virtual environment type:
-    .. code-block:: console
-		
-		virtualenv venv
-                . venv/bin/activate	
-		
-Once you have installed the required packages and created virtual environment, then install QCG-PilotJob using:
-
-    .. code-block:: console
-		
-		pip install qcg-pilotjob
-
-and supplementary packages can be installed using:
-    .. code-block:: console
-		
-		pip install qcg-pilotjob-cmds
-		pip install qcg-pilotjob-executor-api
-
-		
-For more detailed approach please visit:
-    .. code-block:: console
-		
-		https://qcg-pilotjob.readthedocs.io/en/develop/installation.html
