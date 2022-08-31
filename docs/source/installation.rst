@@ -106,7 +106,7 @@ DEST Installation
 ==================
 .. image:: ../../logo_dest.png
    :alt: DEST
-   :target: https://github.com/UCL-CCS/FabNEPTUNE
+   :target: https://dest-doc.readthedocs.io
    :class: with-shadow
    :scale: 60
 
