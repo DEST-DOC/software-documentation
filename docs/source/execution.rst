@@ -1,143 +1,137 @@
 .. _execution:
 
-This document briefly details how user/developers can set up a remote machine on FabSim3 for job submission.
+DEST is designed and implemented as a modular system in order to accommodate further additions and/or improvements to the currently available modelling techniques.  The implementation employs structured and object-oriented approaches to data management, fast memory access as well as vector and parallel processing technologies thus enabling rapid turnaround of numerical simulations comprised within computer aided engineering tasks. 
 
-How to run a Convection2D and Convection3D (test) Jobs
-=======================
+ 
 
-These examples assume that you have been able to run the basic FabSim examples described in the other documentation files, and that you have built and configured Nektar++ (https://www.nektar.info/) on the target machine, also will be assumed that the location (``Convection2D_exec``) has been specified in the file ``machines_FabNEPTUNE_user.yml``.
+This modularity starts from grouping the overall functionality into just three executables: 
 
-All the input files required for a Convection2D simulation should be contained in a directory in ``config_files``.
+DEST_analyser, standalone (GUI-less) Analyser module for direct modelling 
 
+DEST_optimiser, standalone (GUI-less) Optimiser module for inverse modelling 
 
-A minimal example Convection2D simulation is provided in ``config_files/Convection2d_test1``, to execute this example type:
+DEST_conveyor, Graphical User Interface (GUI) to Modeller, Analyser/Optimiser and Reporter modules, in which the Analyser and Optimiser modules incorporate full functionality of standalone DEST_analyser and DEST_optmiser executables 
 
-    .. code-block:: console
-		
-		fabsim localhost Convection2D_local:convection_2d_test	
+ 
 
+Launching executables and command line options: 
 
+DEST_analyser 
 
+ 
 
-Run Ensemble Examples
-=====================
+DEST_anayser can be started by double clicking on the program icon in the file manager or by typing the program name (DEST_anayser_RELEASE_* or DEST_anayser_DEBUG_*) on terminal’s command line.  
 
-Convection2D_ensemble
-------------------------
-These examples assume that you have been able to run the basic FabSim examples described in the other documentation files, and that you have built and configured Nektar++ (https://www.nektar.info/) on the target machine.
+ 
 
-To run type:
+Command line options syntax: 
 
-    .. code-block:: console
-		
-		fabsim localhost Convection2D_ensemble_local:Convection2D_ensemble_example
+-filename 
 
-FabNEPTUNE looks for a directory called ``Convection2D_ensemble_example`` in ``config_files``. It then looks for a sweep directory (by default called ``SWEEP``) that contains a number of input files to iterate through. All the files in ``Convection2D_ensemble_example`` directory and one of the sweep directory files will be copied to the host in separate directories (one for each sweep file) and executed in the normal way. This example runs 3 simulations with different input files, which vary the simulation timestep, using the same topology file.
+The keyword preceding the direct modelling data file name. 
 
+-logdir 
 
-Convection3D_ensemble
-------------------------
+The keyword preceding the log directory name.  The default location of the log file is user’s home directory on Unix systems and the root directory of the current hard disk on MS-Windows system.  The default location of the log file can be specified by setting the environment variable DEST_LOG to the desired log file name. 
 
-These examples assume that you have been able to run the basic FabSim examples described in the other documentation files, and that you have built and configured Nektar++ (https://www.nektar.info/) on the target machine.
+-help 
 
-To run type:
+The keyword causing brief information on the available command line options to be displayed. 
 
-    .. code-block:: console
-		
-		fabsim <remote machine name>  Convection3D_ensemble_remote:Convection3D_ensemble_example
+-debug 
 
+The keyword that announces the following debugging options (available in DEBUG mode only) 
 
+ALL 
 
-FabNEPTUNE looks for a directory called ``Convection3D_ensemble_example`` in ``config_files``. It then looks for a sweep directory (by default called ``SWEEP``) that contains a number of input files to iterate through. All the files in ``Convection3D_ensemble_example`` directory and one of the sweep directory files will be copied to the host in separate directories (one for each sweep file) and executed in the normal way. This example runs 3 simulations with different input files, which vary the simulation timestep, using the same topology file.
-		
+FILE sourcefilename 
 
-EasyVVUQ+FabNEPTUNE
-===================
+FUNC functionname 
 
-These examples assume that you have been able to run the basic FabSim examples described in the other documentation files, and that you have built and configured Nektar++ (https://www.nektar.info/) on the target machine.
+FLOW 
 
-.. Note:: All the easyvvuq campaign runs and  execution, and the results analyse will be done on target machine which can be your localhost or remote HPC machine.
+DUMP 
 
-The input files needed for this example are found in ``plugins/FabNEPTUNE/config_files/convection_2d_easyvvuq_InRuAn*_QCGPJ``. This directory contains the following files that can be modified for your own purpose:
+TIMES 
 
+ 
 
-* ``convection_2d_remote.template``: is the convection2d input script in ``convection_2d_easyvvuq_InRuAn*_QCGPJ`` subfolder, EasyVVUQ will substitute certain variables in this file to create the ensemble.
+The above tabulated command line options can be obtained by typing "-help" after the program name (as illustrated below) or by simply mistyping any of the command line options. 
 
-* ``campaign_params_remote.yml``: is the configuration file, in ``convection_2d_easyvvuq_InRuAn*_QCGPJ`` subfolder, for EasyVVUQ sampler. If you need different sampler, parameter to be varied, or polynomial order, you can set them in this file.
+ 
 
-Execution
----------
-After updating the following files with your credentials
+Examples:  
 
-    .. code-block:: console
-		
-		FabSim3/deploy/machines_user.yml
-		FabSim3/deploy/machines.yml
-		FabSim3/plugins/FabNEPTUNE/machines_FabNEPTUNE_user.yml
+  DEST_analyser_RELEASE_Win32.exe -filename tests/example001.dat -logdir tests/logdir 
 
-``<remote machine>`` can be your ``localhost`` or a HPC resources.
+  DEST_analyser_RELEASE_Linux –filename tests/bars/bar1.dat -logdir tests/logdir 
 
-To run type:
+  DEST_analyser_DEBUG_IRIX64 -filename tests/bars/bar1.dat -logdir tests/logdir -debug FILE solveq.c FUNC F_asseld FLOW TIMES 
+  DEST_analyser_DEBUG_Win32.exe -filename C:\Users\nikpe\REP\DEST-1\TESTS\NEW\KFC\B_0230.dat -logdir C:\Users\nikpe\REP\DEST-1\TESTS\NEW\KFC -debug ALL FLOW TIMES 
+ 
 
-    .. code-block:: console
-		
-               fabsim   localhost   Convection2D_init_run_analyse_campaign_local:convection_2d_easyvvuq_InRuAn*_QCGPJ
-               fabsim   <remote machine name>   Convection2D_init_run_analyse_campaign_remote:convection_2d_easyvvuq_InRuAn*_QCGPJ
-	       
-To copy the results back to your local machine type:
+ 
 
-    .. code-block:: console	       
-	       
-	       fabsim  localhost   fetch_results
-	       fabsim  <remote machine name>   fetch_results
-	       
-	      
-EasyVVUQ+EasySurrogate+FabNEPTUNE
-=================================
+DEST_optimiser 
 
-These examples assume that you have been able to run the basic FabSim examples described in the other documentation files, and that you have built and configured Nektar++ (https://www.nektar.info/) on the target machine.
+DEST_optimiser_RELEASE_Win32.exe -optfilename tests/example071.opt -logdir tests/logdir 
 
-.. Note:: All the EasyVVUQ and EasySurrogate campaigns runs and execution, and the results analyse will be done on target machine which can be your localhost or remote HPC machine.
+ 
 
+DEST_conveyor 
 
-The input files needed for this example are found in ``plugins/FabNEPTUNE/config_files/convection_2d_easyvvuq_easysurrogate_InRuAn*_DAS_QCGPJ``. This directory contains the following files that can be modified for your own purpose:
+ 
 
+DEST_conveyor can be started by double clicking on the program icon in the file manager or by typing the program name (DEST_conveyor_RELEASE_* or DEST_conveyor_DEBUG_*) on terminal’s command line.  
 
-* ``convection_2d_remote.template``: is the convection2d input script in ``convection_2d_easyvvuq_easysurrogate_InRuAn*_DAS_QCGPJ`` subfolder, EasyVVUQ will substitute certain variables in this file to create the ensemble.
+ 
 
-* ``campaign_params_remote.yml``: is the configuration file, in ``convection_2d_easyvvuq_easysurrogate_InRuAn*_DAS_QCGPJ`` subfolder, for EasyVVUQ sampler. If you need different sampler, parameter to be varied, or polynomial order, you can set them in this file.
+Command line options syntax: 
 
-Execution
----------
-After updating the following files with your credentials
+-filename 
 
-    .. code-block:: console
-		
-		FabSim3/deploy/machines_user.yml
-		FabSim3/deploy/machines.yml
-		FabSim3/plugins/FabNEPTUNE/machines_FabNEPTUNE_user.yml
+The keyword preceding the direct modelling data file name. 
 
-``<remote machine>`` can be your ``localhost`` or a HPC resources.
+-optfilename 
 
-To run type:
+The keyword preceding the inverse modelling data file name. 
 
-    .. code-block:: console
-		
-               fabsim   localhost   Convection2D_init_run_analyse_campaign_local:convection_2d_easyvvuq_easysurrogate_InRuAn1_DAS_QCGPJ
-               fabsim   <remote machine name>   Convection2D_init_run_analyse_campaign_remotel:convection_2d_easyvvuq_easysurrogate_InRuAn1_DAS_QCGPJ
-	       fabsim   localhost   Convection2D_init_run_analyse_campaign_local:convection_2d_easyvvuq_easysurrogate_InRuAn2_DAS_QCGPJ
-	       fabsim   <remote machine name>   Convection2D_init_run_analyse_campaign_remote:convection_2d_easyvvuq_easysurrogate_InRuAn2_DAS_QCGPJ
-	       
-To copy the results back to your local machine type:
+-logdir 
 
-    .. code-block:: console	       
-	       
-	       fabsim  localhost   fetch_results
-	       fabsim  <remote machine name>   fetch_results
-	       
+The keyword preceding the log directory name.  The default location of the log file is user’s home directory on Unix systems and the root directory of the current hard disk on MS-Windows system.  The default location of the log file can be specified by setting the environment variable DEST_LOG to the desired log file name. 
 
-.. image:: ../../images/important.png
-   :align: center
-   :alt: important
-   :class: with-shadow
-   :scale: 40
+-help 
+
+The keyword causing brief information on the available command line options to be displayed. 
+
+-debug 
+
+The keyword that announces the following debugging options (available in DEBUG mode only) 
+
+ALL 
+
+FILE sourcefilename 
+
+FUNC functionname 
+
+FLOW 
+
+DUMP 
+
+TIMES 
+
+ 
+
+The above tabulated command line options can be obtained by typing "-help" after the program name (as illustrated below) or by simply mistyping any of the command line options. 
+
+ 
+
+Examples:  
+
+  DEST_conveyor_RELEASE_Win32.exe -filename tests/example001.dat -logdir tests/logdir 
+
+  DEST_conveyor_RELEASE_Win32.exe -optfilename tests/example071.opt -logdir tests/logdir 
+
+  DEST_conveyor_RELEASE_Linux –filename tests/bars/bar1.dat -logdir tests/logdir 
+
+  DEST_conveyor_DEBUG_IRIX64 -filename tests/bars/bar1.dat -logdir tests/logdir -debug FILE,solveq.c,FUNC,F_asseld FLOW TIMES 
