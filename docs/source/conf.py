@@ -21,8 +21,8 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 
 project = 'DEST'
-copyright = '2022, Kevin Bronik, Derek Groen, Ed Threlfall'
-author = 'Kevin Bronik, Derek Groen, Ed Threlfall'
+copyright = '2022, Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic'
+author = 'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic'
 
 # The short X.Y version
 version = ''
@@ -46,7 +46,7 @@ html_static_path = ['_static']
 master_doc = 'index'
 
 # -- Options for HTML output -------------------------------------------------
-html_logo = "../../logo.png"
+html_logo = "../../logo_dest.png"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -111,6 +111,6 @@ latex_elements = {
 
 latex_documents = [
     (master_doc, 'DEST.tex', 'DEST Documentation',
-     'Kevin Bronik, Derek Groen, Ed Threlfall', 'manual'),
+     'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic', 'manual'),
 ]
 '''
