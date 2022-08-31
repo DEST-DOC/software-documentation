@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'FabNEPTUNE'
+project = 'DEST'
 copyright = '2022, Kevin Bronik, Derek Groen, Ed Threlfall'
 author = 'Kevin Bronik, Derek Groen, Ed Threlfall'
 
@@ -51,14 +51,14 @@ html_logo = "../../logo.png"
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'FabNEPTUNEdoc'
+htmlhelp_basename = 'DESTdoc'
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'FabNEPTUNE', 'FabNEPTUNE Documentation',
+    (master_doc, 'DEST', 'DEST Documentation',
      [author], 1)
 ]
 
@@ -66,8 +66,8 @@ man_pages = [
 # -- Options for Texinfo output ----------------------------------------------
 
 texinfo_documents = [
-    (master_doc, 'FabNEPTUNE', 'FabNEPTUNE Documentation',
-     author, 'FabNEPTUNE', 'One line description of project.',
+    (master_doc, 'DEST', 'DEST Documentation',
+     author, 'DEST', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -110,7 +110,7 @@ latex_elements = {
 }
 
 latex_documents = [
-    (master_doc, 'FabNEPTUNE.tex', 'FabNEPTUNE Documentation',
+    (master_doc, 'DEST.tex', 'DEST Documentation',
      'Kevin Bronik, Derek Groen, Ed Threlfall', 'manual'),
 ]
 '''
