@@ -31,7 +31,7 @@ At the same time, building a database of results of experiments and the correspo
    installation
 
 .. toctree::
-   :caption: FabNEPTUNE Workflow 
+   :caption: DEST Workflow 
    :maxdepth: 1
 
    workflow
