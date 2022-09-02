@@ -2,7 +2,7 @@
 
 This document briefly details how user/developers can set up a remote/local machine for job run/submission.
 
-How to run using Visual Studio 
+How to run on Visual Studio 
 =======================
 
 Currently the only IDE that can generate all three executables (DEST_analyser, DEST_optimiser and DEST_conveyor) for Windows. 
@@ -12,7 +12,7 @@ The "make" (as an older version of "cmake") approach to compiling and linking th
 
 
 
-Run using Visual Studio Code 
+How to run on Visual Studio Code 
 =====================
 
 Visual Studio Code download 
@@ -25,7 +25,7 @@ Open DEST repository (http://isml-grs.eng.ox.ac.uk:8000)
 
 
 
-Run on macOS
+How to run on macOS
 =====================
 
 Requirement: 
@@ -57,3 +57,9 @@ make -j 12
 Test  
 
 ./ANALYSER_ -filename ../TESTS/B_005/B_005.dat 
+
+
+How to run on Linux
+=====================
+
+Requirement: 
