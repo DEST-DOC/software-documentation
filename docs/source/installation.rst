@@ -48,8 +48,8 @@ DEST on ARCHER2
 
 
 .. image:: ../../images/logo_dest.png
-   :alt: Nektar++
-   :target: https://www.nektar.info/
+   :alt: DESTx
+   :target: https://www.DEST
    :class: with-shadow
    :scale: 50
 
@@ -69,7 +69,7 @@ Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g.
     .. code-block:: console
 		
 		cd /work/e01/e01/mlahooti
-                git clone https://gitlab.nektar.info/nektar/nektar.git nektarpp 
+                git clone https://gitlab.DEST 
 
 
 After the code is cloned, enter the nektarpp folder, make a build directory and enter it
@@ -99,7 +99,7 @@ At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run
 For more detailed approach please visit:
     .. code-block:: console
 		
-		https://www.nektar.info/nektar-on-archer2/
+		https://www.DEST
     
 
 DEST Installation
@@ -110,18 +110,7 @@ DEST Installation
    :class: with-shadow
    :scale: 60
 
-Before being able to run FabNEPTUNE [with the assumption that you have been able to run the basic FabSim examples described in the other documentation files, and that you have configured and built Nektar++ (https://www.nektar.info/) on the target machine, and  successfully tested the executable code!], you should install FabNEPTUNE inside of FabSim3. This will  provide functionality to extend FabSim3's workflow and remote submission capabilities to NEPTUNE specific tasks. 
-
-* To install FabSim3 tool, please follow the installation from https://fabsim3.readthedocs.io/en/latest/installation.html
-
-* To install FabNEPTUNE plugin, simply type:
-
-    .. code-block:: console
-		
-		fabsim localhost install_plugin:FabNEPTUNE
-		
-		
-After installation of FabNEPTUNE the following need to be done.
+Before being able to run DEST ....
 
 Custom Environments 
 ==================
