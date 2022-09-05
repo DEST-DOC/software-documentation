@@ -21,8 +21,8 @@ sys.path.insert(0, os.path.abspath('.'))
 # -- Project information -----------------------------------------------------
 
 project = 'DEST'
-copyright = '2022, Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic'
-author = 'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic'
+copyright = '2022, Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Simone Falco, Nik Petrinic'
+author = 'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Simone Falco, Nik Petrinic'
 
 # The short X.Y version
 version = ''
@@ -111,6 +111,6 @@ latex_elements = {
 
 latex_documents = [
     (master_doc, 'DEST.tex', 'DEST Documentation',
-     'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Nik Petrinic', 'manual'),
+     'Kevin Bronik, Kin Chan, Duygu Sap, Indrajeet Sahu, Simone Falco, Nik Petrinic', 'manual'),
 ]
 '''
