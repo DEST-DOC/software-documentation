@@ -43,7 +43,7 @@ At the same time, building a database of results of experiments and the correspo
    workflow
 
 .. toctree::
-   :caption: DEST Execution
+   :caption: DEST Execution within IDE
    :maxdepth: 1
 
    execution
