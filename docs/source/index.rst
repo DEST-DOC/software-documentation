@@ -28,7 +28,7 @@ At the same time, building a database of results of experiments and the correspo
    :caption: Installation and build
    :maxdepth: 1
 
-   installation
+   DESTconfigurationandbuild
 
 .. toctree::
    :caption: DEST Workflow 
