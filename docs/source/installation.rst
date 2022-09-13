@@ -1,6 +1,6 @@
-.. _installation:
+.. _DEST configuration and build:
 
-.. Installation
+.. DEST configuration and build
 .. ============
 
 Modules 
