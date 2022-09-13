@@ -3,40 +3,6 @@
 .. DEST configuration and build
 .. ============
 
-Modules 
-===================
-
-DEST is designed and implemented as a modular system in order to accommodate further additions and/or improvements to the currently available modelling techniques.  The implementation employs structured and object-oriented approaches to data management, fast memory access as well as vector and parallel processing technologies thus enabling rapid turnaround of numerical simulations comprised within computer aided engineering tasks. 
-
- 
-This modularity starts from grouping the overall functionality into these key modules (each module should create a library upon compilation) 
-
-UTIL - fundamental library that provides interfaces to different computing platforms (Linux, Windows, macOS, etc.) 
-
-Note that some header files simply provide "redirection" to equivalent header files in various default folders on different platforms 
-
-Please make sure that anything platform dependent which you encounter during the development is discussed with the aim to implement such fundamental, platform dependent, functionality in this folder 
-
-UI - another fundamental library that provides the platform dependent functionality for Graphical User Interface that enables DEST_conveyor to appear on the screen and perform its functionality.  The underlying enabling library is Tcl/Tk.  This is one of DEST's vulnerabilities, as maintaining this functionality depends upon the availability and further development of the Tcl/Tk software which is being constantly being super-seeded by python or the availability of generic pre-post/processors such as GMESH and ParaView. 
-
-DBASE - this module is responsible for structing the memory and for input/output functionality that fills that memory from input data file, as well as outputs from that memory into output files - see:  Data flow 
-
-MESHGEN 
-
-DOMDEC 
-
-ANALYSER - This is, currently, an explicit DEM/FEM solver for direct modelling. 
-
-OPTIMISER - A simple optimisation package designed to run simultaneously many DEST_analyser runs and vary parameters that are labelled in all .dat files for the DEST_analyser runs in the same optimisation run.  Objective functions can be provided in different ways, as per documentation.  This is an inverse modelling tool. 
-
-CONVEYOR - GUI and "integration platform", designed to work closely with DEST_analysers and DEST_optimiser, but also to help with various interfacing and automation tasks. 
-
- 
-
-The above is a "bottom-up" description, in terms of dependencies, but the interdependencies are sometimes a bit more complex than the above list suggests, though every effort should be made to keep the interdependencies as simple as possible. 
-
-
-
 DEST configuration and build
 ===================
 
@@ -102,7 +68,128 @@ For more detailed approach please visit:
 		https://www.DEST
     
 
-DEST Installation
+
+DEST on ARC
+===================
+
+
+.. image:: ../../images/logo_dest.png
+   :alt: DESTx
+   :target: https://www.DEST
+   :class: with-shadow
+   :scale: 50
+
+
+After being successfully logged into the cluster, first export the following and load modules:
+
+    .. code-block:: console
+		
+		export CRAY_ADD_RPATH=yes
+                module swap PrgEnv-cray PrgEnv-gnu 
+                module load cray-fftw
+		module load cmake
+
+
+Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
+
+    .. code-block:: console
+		
+		cd /work/e01/e01/mlahooti
+                git clone https://gitlab.DEST 
+
+
+After the code is cloned, enter the nektarpp folder, make a build directory and enter it
+    .. code-block:: console
+		
+		cd nektarpp
+                mkdir build
+                cd build
+
+
+From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+    .. code-block:: console
+		
+	CC=cc CXX=CC cmake -DNEKTAR_USE_SYSTEM_BLAS_LAPACK=OFF -DNEKTAR_USE_MPI=ON -DNEKTAR_USE_HDF5=ON -DNEKTAR_USE_FFTW=ON -DTHIRDPARTY_BUILD_BOOST=ON -DTHIRDPARTY_BUILD_HDF5=ON ..
+
+
+cc and CC are the C and C++ wrappers for the Cray utilities and determined by the PrgEnv module.
+SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
+HDF5 is a better output option to use on ARCHER2 since often we run out of the number of files limit on the quota. Setting this option from within ccmake has led to problems however so make sure to specify it on the cmake command line as above. Further, the HDF5 version on the ARCHER2 is not supported at the moment, so here it is built as a third-party library.
+They are currently not using the system boost since it does not appear to be using C++11 and so causing compilation errors.
+At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run make as usual to compile the code
+
+    .. code-block:: console
+		
+		make -j 4 install
+
+For more detailed approach please visit:
+    .. code-block:: console
+		
+		https://www.DEST
+		
+		
+DEST on Cloud Computing Platforms
+===================
+
+
+.. image:: ../../images/logo_dest.png
+   :alt: DESTx
+   :target: https://www.DEST
+   :class: with-shadow
+   :scale: 50
+
+
+Amazon Web Services (AWS)
+-------------------------
+
+After being successfully logged into the cluster, first export the following and load modules:
+
+    .. code-block:: console
+		
+		export CRAY_ADD_RPATH=yes
+                module swap PrgEnv-cray PrgEnv-gnu 
+                module load cray-fftw
+		module load cmake
+
+
+Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
+
+    .. code-block:: console
+		
+		cd /work/e01/e01/mlahooti
+                git clone https://gitlab.DEST 
+
+
+After the code is cloned, enter the nektarpp folder, make a build directory and enter it
+    .. code-block:: console
+		
+		cd nektarpp
+                mkdir build
+                cd build
+
+
+From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+    .. code-block:: console
+		
+	CC=cc CXX=CC cmake -DNEKTAR_USE_SYSTEM_BLAS_LAPACK=OFF -DNEKTAR_USE_MPI=ON -DNEKTAR_USE_HDF5=ON -DNEKTAR_USE_FFTW=ON -DTHIRDPARTY_BUILD_BOOST=ON -DTHIRDPARTY_BUILD_HDF5=ON ..
+
+
+cc and CC are the C and C++ wrappers for the Cray utilities and determined by the PrgEnv module.
+SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
+HDF5 is a better output option to use on ARCHER2 since often we run out of the number of files limit on the quota. Setting this option from within ccmake has led to problems however so make sure to specify it on the cmake command line as above. Further, the HDF5 version on the ARCHER2 is not supported at the moment, so here it is built as a third-party library.
+They are currently not using the system boost since it does not appear to be using C++11 and so causing compilation errors.
+At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run make as usual to compile the code
+
+    .. code-block:: console
+		
+		make -j 4 install
+
+For more detailed approach please visit:
+    .. code-block:: console
+		
+		https://www.DEST	
+
+DEST on Local Machine
 ==================
 .. image:: ../../logo_dest.png
    :alt: DEST
