@@ -28,7 +28,37 @@ After being successfully logged into the cluster, first export the following and
                 module swap PrgEnv-cray PrgEnv-gnu 
                 module load cray-fftw
 		module load cmake
+		
+Custom Environments 
+==================
 
+Regardless of the existing python environment on the HPC/local system, you need to setup a custom Python environment including packages that are not in the central installation, the simplest approach here would be the installation of Miniconda locally in your own directories.
+
+Installing Miniconda
+==================
+.. image:: ../../images/ac.png
+   :alt: Miniconda
+   :target: https://docs.conda.io/en/latest/miniconda.html
+   :class: with-shadow
+   :scale: 30
+
+First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
+
+.. Note:: If you wish to use Python on the Archer2's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+
+
+Once you have downloaded the installer, you can run it. 
+For example:
+
+    .. code-block:: console
+		
+		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
+		
+After you have installed Miniconda and setup your environment to access it, you can install whatever packages you wish using the conda install ... command. 
+For example: 
+    .. code-block:: console
+		
+		(base)user@login*:~> conda install somepy
 
 Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
 
@@ -89,7 +119,37 @@ After being successfully logged into the cluster, first export the following and
                 module load cray-fftw
 		module load cmake
 
+Custom Environments 
+==================
 
+Regardless of the existing python environment on the HPC/local system, you need to setup a custom Python environment including packages that are not in the central installation, the simplest approach here would be the installation of Miniconda locally in your own directories.
+
+Installing Miniconda
+==================
+.. image:: ../../images/ac.png
+   :alt: Miniconda
+   :target: https://docs.conda.io/en/latest/miniconda.html
+   :class: with-shadow
+   :scale: 30
+
+First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
+
+.. Note:: If you wish to use Python on the Archer2's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+
+
+Once you have downloaded the installer, you can run it. 
+For example:
+
+    .. code-block:: console
+		
+		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
+		
+After you have installed Miniconda and setup your environment to access it, you can install whatever packages you wish using the conda install ... command. 
+For example: 
+    .. code-block:: console
+		
+		(base)user@login*:~> conda install somepy
+		
 Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
 
     .. code-block:: console
@@ -197,36 +257,52 @@ DEST on Local Machine
    :class: with-shadow
    :scale: 60
 
-Before being able to run DEST ....
 
-Custom Environments 
-==================
+How to build and run on Windows
+=====================
 
-Regardless of the existing python environment on the HPC/local system, you need to setup a custom Python environment including packages that are not in the central installation, the simplest approach here would be the installation of Miniconda locally in your own directories.
-
-Installing Miniconda
-==================
-.. image:: ../../images/ac.png
-   :alt: Miniconda
-   :target: https://docs.conda.io/en/latest/miniconda.html
-   :class: with-shadow
-   :scale: 30
-
-First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
-
-.. Note:: If you wish to use Python on the Archer2's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+Requirement:
 
 
-Once you have downloaded the installer, you can run it. 
-For example:
+How to build and run on macOS
+=====================
 
-    .. code-block:: console
-		
-		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
-		
-After you have installed Miniconda and setup your environment to access it, you can install whatever packages you wish using the conda install ... command. 
-For example: 
-    .. code-block:: console
-		
-		(base)user@login*:~> conda install somepy
+Requirement: 
+
+Add public ssh key to Gitlab server 
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+
+brew update 
+
+brew install llvm libomp 
+
+brew install cmake 
+
+Git clone "http://isml-grs.eng.ox.ac.uk:8000/DEST/DEST.git"  
+
+ 
+
+Compile 
+
+cd DEST/BIN 
+
+cmake -DCMAKE_C_COMPILER="/usr/local/opt/llvm/bin/clang" -DCMAKE_CXX_COMPILER="/usr/local/opt/llvm/bin/clang++" .. 
+
+make -j 12 
+
+ 
+
+Test  
+
+./ANALYSER_ -filename ../TESTS/B_005/B_005.dat 
+
+
+How to build and run on Linux
+=====================
+
+Requirement: 
+
+
+
 
