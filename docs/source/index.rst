@@ -31,6 +31,12 @@ At the same time, building a database of results of experiments and the correspo
    DESTconfigurationandbuild
 
 .. toctree::
+   :caption: Modules
+   :maxdepth: 1
+
+   modules
+   
+.. toctree::
    :caption: DEST Workflow 
    :maxdepth: 1
 
