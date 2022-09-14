@@ -17,7 +17,7 @@ DEST on ARCHER2
    :alt: archerx
    :target: https://www.archer2.ac.uk/
    :class: with-shadow
-   :scale: 50
+   :scale: 70
 
 
 After being successfully logged into the cluster, first export the following and load modules:
@@ -103,9 +103,9 @@ DEST on ARC
 ===================
 
 
-.. image:: ../../images/logo_dest.png
-   :alt: DESTx
-   :target: https://www.DEST
+.. image:: ../../images/ARC.png
+   :alt: arc
+   :target: https://www.arc.ox.ac.uk/home
    :class: with-shadow
    :scale: 50
 
