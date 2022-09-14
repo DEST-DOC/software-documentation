@@ -192,8 +192,8 @@ DEST on Cloud Computing Platforms
 ===================
 
 
-.. image:: ../../images/logo_dest.png
-   :alt: DESTx
+.. image:: ../../images/Cloud-Computing-Platforms.png
+   :alt: cloudx
    :target: https://www.DEST
    :class: with-shadow
    :scale: 50
@@ -201,6 +201,12 @@ DEST on Cloud Computing Platforms
 
 Amazon Web Services (AWS)
 -------------------------
+
+.. image:: ../../images/AWS.png
+   :alt: awsx
+   :target: https://aws.amazon.com/free
+   :class: with-shadow
+   :scale: 100
 
 After being successfully logged into the cluster, first export the following and load modules:
 
