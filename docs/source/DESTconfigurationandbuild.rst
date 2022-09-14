@@ -6,7 +6,7 @@
 DEST configuration and build
 ===================
 
-In the following we will provide an example on how to configure and build Nektar++ on a remote machine.
+In the following we will provide an example on how to configure and build DEST on a local/remote machine.
 
 
 DEST on ARCHER2
@@ -199,7 +199,7 @@ DEST on Cloud Computing Platforms
    :scale: 50
 
 
-Amazon Web Services (AWS)
+DEST on Amazon Web Services (AWS)
 -------------------------
 
 .. image:: ../../images/AWS.png
