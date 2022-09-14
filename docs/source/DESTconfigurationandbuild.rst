@@ -13,9 +13,9 @@ DEST on ARCHER2
 ===================
 
 
-.. image:: ../../images/logo_dest.png
-   :alt: DESTx
-   :target: https://www.DEST
+.. image:: ../../images/archer2_logo_small.png
+   :alt: archerx
+   :target: https://www.archer2.ac.uk/
    :class: with-shadow
    :scale: 50
 
