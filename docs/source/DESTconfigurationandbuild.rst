@@ -27,7 +27,7 @@ After being successfully logged into the cluster, first export the following and
 		export CRAY_ADD_RPATH=yes
                 module swap PrgEnv-cray PrgEnv-gnu 
                 module load cray-fftw
-		module load cmake
+		module load cmake/3.21.3
 		
 Custom Environments 
 ==================
@@ -54,48 +54,57 @@ For example:
 		
 		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
 		
-After you have installed Miniconda and setup your environment to access it, you can install whatever packages you wish using the conda install ... command. 
-For example: 
+After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
+For example create the following environment: 
     .. code-block:: console
 		
-		(base)user@login*:~> conda install somepy
+		(base)user@login*:~> conda create -n py3_32
+		(base)user@login*:~> conda activate py3_32
+		(py3_32)user@login*:~> conda config --env --set subdir linux-32
+		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
+		(py3_32)user@login*:~> conda install -c conda-forge ninja
 
-Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
+Enter the work directory (/work) and clone the DEST code into a folder, e.g. dest_master
 
     .. code-block:: console
 		
-		cd /work/e01/e01/mlahooti
-                git clone https://gitlab.DEST 
+		cd work/e723/e723/yours
+                git clone https://gitlab.DEST_master 
 
 
-After the code is cloned, enter the nektarpp folder, make a build directory and enter it
+After the code is cloned, enter the DEST folder, make a build directory and enter it
     .. code-block:: console
 		
-		cd nektarpp
-                mkdir build
-                cd build
+		cd dest_master
+                cd BIN
 
 
 From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+
     .. code-block:: console
 		
-	CC=cc CXX=CC cmake -DNEKTAR_USE_SYSTEM_BLAS_LAPACK=OFF -DNEKTAR_USE_MPI=ON -DNEKTAR_USE_HDF5=ON -DNEKTAR_USE_FFTW=ON -DTHIRDPARTY_BUILD_BOOST=ON -DTHIRDPARTY_BUILD_HDF5=ON ..
+	cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/install"  -DCMAKE_C_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-cc" -DCMAKE_CXX_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-c++"  /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/CMakeLists.txt
 
 
-cc and CC are the C and C++ wrappers for the Cray utilities and determined by the PrgEnv module.
+i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
-HDF5 is a better output option to use on ARCHER2 since often we run out of the number of files limit on the quota. Setting this option from within ccmake has led to problems however so make sure to specify it on the cmake command line as above. Further, the HDF5 version on the ARCHER2 is not supported at the moment, so here it is built as a third-party library.
-They are currently not using the system boost since it does not appear to be using C++11 and so causing compilation errors.
-At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run make as usual to compile the code
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers. Now run make as usual to build the code
 
     .. code-block:: console
 		
-		make -j 4 install
+		cmake --build /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src  --clean-first  --config Debug -- "-v"
+		
+Then check the executable file
 
-For more detailed approach please visit:
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
     .. code-block:: console
 		
-		https://www.DEST
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
     
 
 
@@ -144,48 +153,57 @@ For example:
 		
 		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
 		
-After you have installed Miniconda and setup your environment to access it, you can install whatever packages you wish using the conda install ... command. 
-For example: 
+After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
+For example create the following environment: 
     .. code-block:: console
 		
-		(base)user@login*:~> conda install somepy
-		
-Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
+		(base)user@login*:~> conda create -n py3_32
+		(base)user@login*:~> conda activate py3_32
+		(py3_32)user@login*:~> conda config --env --set subdir linux-32
+		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
+		(py3_32)user@login*:~> conda install -c conda-forge ninja
+
+Enter the work directory (/work) and clone the DEST code into a folder, e.g. dest_master
 
     .. code-block:: console
 		
-		cd /work/e01/e01/mlahooti
-                git clone https://gitlab.DEST 
+		cd work/e723/e723/yours
+                git clone https://gitlab.DEST_master 
 
 
-After the code is cloned, enter the nektarpp folder, make a build directory and enter it
+After the code is cloned, enter the DEST folder, make a build directory and enter it
     .. code-block:: console
 		
-		cd nektarpp
-                mkdir build
-                cd build
+		cd dest_master
+                cd BIN
 
 
 From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+
     .. code-block:: console
 		
-	CC=cc CXX=CC cmake -DNEKTAR_USE_SYSTEM_BLAS_LAPACK=OFF -DNEKTAR_USE_MPI=ON -DNEKTAR_USE_HDF5=ON -DNEKTAR_USE_FFTW=ON -DTHIRDPARTY_BUILD_BOOST=ON -DTHIRDPARTY_BUILD_HDF5=ON ..
+	cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/install"  -DCMAKE_C_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-cc" -DCMAKE_CXX_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-c++"  /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/CMakeLists.txt
 
 
-cc and CC are the C and C++ wrappers for the Cray utilities and determined by the PrgEnv module.
+i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
-HDF5 is a better output option to use on ARCHER2 since often we run out of the number of files limit on the quota. Setting this option from within ccmake has led to problems however so make sure to specify it on the cmake command line as above. Further, the HDF5 version on the ARCHER2 is not supported at the moment, so here it is built as a third-party library.
-They are currently not using the system boost since it does not appear to be using C++11 and so causing compilation errors.
-At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run make as usual to compile the code
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers. Now run make as usual to build the code
 
     .. code-block:: console
 		
-		make -j 4 install
+		cmake --build /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src  --clean-first  --config Debug -- "-v"
+		
+Then check the executable file
 
-For more detailed approach please visit:
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
     .. code-block:: console
 		
-		https://www.DEST
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
 		
 		
 DEST on Cloud Computing Platforms
