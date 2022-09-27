@@ -64,7 +64,7 @@ For example create the following environment:
 		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
 		(py3_32)user@login*:~> conda install -c conda-forge ninja
 
-Enter the work directory (/work) and clone the DEST code into a folder, e.g. dest_master
+Enter the work directory (/work) and clone the DEST code into a folder, e.g. DEST-master
 
     .. code-block:: console
 		
@@ -75,11 +75,11 @@ Enter the work directory (/work) and clone the DEST code into a folder, e.g. des
 After the code is cloned, enter the DEST folder, make a build directory and enter it
     .. code-block:: console
 		
-		cd dest_master
+		cd DEST-master
                 cd BIN
 
 
-From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers (py3_32 environment).
 
     .. code-block:: console
 		
@@ -89,7 +89,7 @@ From within the build directory, run the configure command. Note the use of CC a
 i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
 
-At this point you can run cmake .. to e.g. disable unnecessary solvers. Now run make as usual to build the code
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code
 
     .. code-block:: console
 		
@@ -123,10 +123,8 @@ After being successfully logged into the cluster, first export the following and
 
     .. code-block:: console
 		
-		export CRAY_ADD_RPATH=yes
-                module swap PrgEnv-cray PrgEnv-gnu 
-                module load cray-fftw
-		module load cmake
+		module load CMake/3.23.1-GCCcore-11.3.0
+                module load Ninja/1.10.2-GCCcore-11.2.0
 
 Custom Environments 
 ==================
@@ -140,6 +138,7 @@ Installing Miniconda
    :target: https://docs.conda.io/en/latest/miniconda.html
    :class: with-shadow
    :scale: 30
+
 
 First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
 
@@ -161,38 +160,37 @@ For example create the following environment:
 		(base)user@login*:~> conda activate py3_32
 		(py3_32)user@login*:~> conda config --env --set subdir linux-32
 		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
-		(py3_32)user@login*:~> conda install -c conda-forge ninja
 
-Enter the work directory (/work) and clone the DEST code into a folder, e.g. dest_master
+Enter the work directory (/work) and clone the DEST code into a folder, e.g. DEST-master
 
     .. code-block:: console
 		
-		cd work/e723/e723/yours
+		cd /data/engsci-impact-eng-lab/yours
                 git clone https://gitlab.DEST_master 
 
 
 After the code is cloned, enter the DEST folder, make a build directory and enter it
     .. code-block:: console
 		
-		cd dest_master
+		cd DEST-master
                 cd BIN
 
 
-From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
+From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARC-specific compilers (py3_32 environment).
 
     .. code-block:: console
 		
-	cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/install"  -DCMAKE_C_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-cc" -DCMAKE_CXX_COMPILER="/mnt/lustre/a2fs-work2/work/e723/e723/kevinb/miniconda3/envs/P32/bin/i686-conda_cos6-linux-gnu-c++"  /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src/CMakeLists.txt
+	cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/data/engsci-impact-eng-lab/engs2454/DEST-master_32/src/install"  -DCMAKE_C_COMPILER="/data/engsci-impact-eng-lab/engs2454/miniconda3/envs/py3_32/bin/i686-conda_cos6-linux-gnu-cc"  -DCMAKE_CXX_COMPILER="/data/engsci-impact-eng-lab/engs2454/miniconda3/envs/py3_32/bin/i686-conda_cos6-linux-gnu-c++"  /data/engsci-impact-eng-lab/engs2454/DEST-master_32/src/CMakeLists.txt
 
 
 i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
 
-At this point you can run cmake .. to e.g. disable unnecessary solvers. Now run make as usual to build the code
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code
 
     .. code-block:: console
 		
-		cmake --build /mnt/lustre/a2fs-work2/work/e723/e723/kevinb/DEST-master/src  --clean-first  --config Debug -- "-v"
+		cmake --build /data/engsci-impact-eng-lab/engs2454/DEST-master_32/src/BIN  --clean-first  --config Debug -- "-v"
 		
 Then check the executable file
 
