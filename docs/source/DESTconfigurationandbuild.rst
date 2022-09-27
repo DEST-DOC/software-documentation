@@ -142,7 +142,7 @@ Installing Miniconda
 
 First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
 
-.. Note:: If you wish to use Python on the Archer2's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+.. Note:: If you wish to use Python on the ARC's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
 
 
 Once you have downloaded the installer, you can run it. 
@@ -184,7 +184,6 @@ From within the build directory, run the configure command. Note the use of CC a
 
 
 i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
-SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
 
 At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code
 
