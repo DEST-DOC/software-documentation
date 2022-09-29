@@ -56,6 +56,7 @@ For example:
 		
 After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
 For example create the following environment: 
+
     .. code-block:: console
 		
 		(base)user@login*:~> conda create -n py3_32
@@ -314,8 +315,11 @@ For example:
 		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
 		
 After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
+
 Then install cmake and create the following environment: 
+
     .. code-block:: console
+    
 		(base)user@login*:~>conda install -c conda-forge cxx-compiler
 		(base)user@login*:~>wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
 		(base)user@login*:~>tar -zxvf cmake-3.20.0.tar.gz
@@ -327,6 +331,7 @@ Then install cmake and create the following environment:
 		(base)user@login*:~> conda activate py3_32
 		(py3_32)user@login*:~> conda config --env --set subdir linux-32
 		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
+
 
 Enter your work directory (AWS ----> /data) and clone the DEST code into a folder, e.g. DEST-master
 
