@@ -231,7 +231,9 @@ After the code is cloned, enter the DEST folder, make a build directory and ente
 		cd DEST-master
                 cd src/BIN
 		
- From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARC-specific compilers.
+
+
+From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARC-specific compilers.
 
     .. code-block:: console
     
@@ -243,7 +245,9 @@ At this point you can run cmake .. to e.g. disable unnecessary solvers, then run
      
               cmake --build /data/system/ouit0554/users/bronik/DEST-master_32/src --clean-first --config Debug -- "-v"
  
- For testing the executable file you can run the following:
+ 
+
+For testing the executable file you can run the following:
  
     .. code-block:: console
     
