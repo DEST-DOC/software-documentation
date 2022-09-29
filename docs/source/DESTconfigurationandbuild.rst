@@ -262,7 +262,6 @@ DEST on Cloud Computing Platforms
 
 .. image:: ../../images/Cloud-Computing-Platforms.png
    :alt: cloudx
-   :target: https://www.DEST
    :class: with-shadow
    :scale: 50
 
@@ -276,52 +275,100 @@ DEST on Amazon Web Services (AWS)
    :class: with-shadow
    :scale: 100
 
-After being successfully logged into the cluster, first export the following and load modules:
+After being successfully logged into the cluster, do the following:
 
     .. code-block:: console
 		
-		export CRAY_ADD_RPATH=yes
-                module swap PrgEnv-cray PrgEnv-gnu 
-                module load cray-fftw
-		module load cmake
+            1- First you have to check which AWS EC2 OS is used and if bit32 is supported 
+            2- For Amazon Linux 2 you have to look what is provided as package ex: yum whatprovides /lib/ld-linux.so.2
+            3- You will get a list of all packages
+            4- Choose the right  and stable package (example: yum install glibc-2.26-60.amzn2.i686)
+            5- Test if is working
 
 
-Enter the work directory (/work) and clone the Nektar++ code into a folder, e.g. nektarpp
 
-    .. code-block:: console
-		
-		cd /work/e01/e01/mlahooti
-                git clone https://gitlab.DEST 
+Custom Environments 
+==================
 
+Regardless of the existing python environment on the HPC/local system, you need to setup a custom Python environment including packages that are not in the central installation, the simplest approach here would be the installation of Miniconda locally in your own directories.
 
-After the code is cloned, enter the nektarpp folder, make a build directory and enter it
-    .. code-block:: console
-		
-		cd nektarpp
-                mkdir build
-                cd build
-
-
-From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers.
-    .. code-block:: console
-		
-	CC=cc CXX=CC cmake -DNEKTAR_USE_SYSTEM_BLAS_LAPACK=OFF -DNEKTAR_USE_MPI=ON -DNEKTAR_USE_HDF5=ON -DNEKTAR_USE_FFTW=ON -DTHIRDPARTY_BUILD_BOOST=ON -DTHIRDPARTY_BUILD_HDF5=ON ..
+Installing Miniconda
+==================
+.. image:: ../../images/ac.png
+   :alt: Miniconda
+   :target: https://docs.conda.io/en/latest/miniconda.html
+   :class: with-shadow
+   :scale: 30
 
 
-cc and CC are the C and C++ wrappers for the Cray utilities and determined by the PrgEnv module.
-SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
-HDF5 is a better output option to use on ARCHER2 since often we run out of the number of files limit on the quota. Setting this option from within ccmake has led to problems however so make sure to specify it on the cmake command line as above. Further, the HDF5 version on the ARCHER2 is not supported at the moment, so here it is built as a third-party library.
-They are currently not using the system boost since it does not appear to be using C++11 and so causing compilation errors.
-At this point you can run ccmake .. to e.g. disable unnecessary solvers. Now run make as usual to compile the code
+First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
+
+.. Note:: If you wish to use Python on the ARC's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+
+
+Once you have downloaded the installer, you can run it. 
+For example:
 
     .. code-block:: console
 		
-		make -j 4 install
+		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
+		
+After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
+Then install cmake and create the following environment: 
+    .. code-block:: console
+		(base)user@login*:~>conda install -c conda-forge cxx-compiler
+		(base)user@login*:~>wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
+		(base)user@login*:~>tar -zxvf cmake-3.20.0.tar.gz
+		(base)user@login*:~>cd cmake-3.20.0
+		(base)user@login*:~>./bootstrap  --prefix=/home/ec2-user/CMAKE            (update this line with your install path)
+		(base)user@login*:~>gmake
+		(base)user@login*:~>make install
+		(base)user@login*:~> conda create -n py3_32
+		(base)user@login*:~> conda activate py3_32
+		(py3_32)user@login*:~> conda config --env --set subdir linux-32
+		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
 
-For more detailed approach please visit:
+Enter your work directory (AWS ----> /data) and clone the DEST code into a folder, e.g. DEST-master
+
     .. code-block:: console
 		
-		https://www.DEST	
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
+    .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
+
+
+From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARC-specific compilers (py3_32 environment).
+
+    .. code-block:: console
+		
+	/home/ec2-user/CMAKE/bin/cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/home/ec2-user/DEST-master/src/install"  -DCMAKE_C_COMPILER="/home/ec2-user/miniconda3/envs/py3_32/bin/i686-conda_cos6-linux-gnu-cc"  -DCMAKE_CXX_COMPILER="/home/ec2-user/miniconda3/envs/py3_32/bin/i686-conda_cos6-linux-gnu-c++"  /home/ec2-user/DEST-master/src/CMakeLists.txt
+
+.. Note:: /home/ec2-user/CMAKE/bin/cmake needs to be replaced with your CMAKE installation directory.
+
+i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the utilities and determined by the Miniconda py3_32 environment.
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
+
+    .. code-block:: console
+		
+		/home/ec2-user/CMAKE/bin/cmake --build /home/ec2-user/DEST-master/src  --clean-first  --config Debug -- "-v"
+		
+Then check the executable file
+
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
+    .. code-block:: console
+		
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat	
 
 DEST on Local Machine
 ==================
