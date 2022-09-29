@@ -79,7 +79,7 @@ After the code is cloned, enter the DEST folder, make a build directory and ente
                 cd BIN
 
 
-From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARCHER-specific compilers (py3_32 environment).
+From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARCHER-specific compilers (py3_32 environment).
 
     .. code-block:: console
 		
@@ -89,7 +89,7 @@ From within the build directory, run the configure command. Note the use of CC a
 i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 SYSTEM_BLAS_LAPACK is disabled since, by default, we can use the libsci package which contains an optimized version of BLAS and LAPACK and not require any additional arguments to cc.
 
-At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
 
     .. code-block:: console
 		
@@ -125,6 +125,10 @@ After being successfully logged into the cluster, first export the following and
 		
 		module load CMake/3.23.1-GCCcore-11.3.0
                 module load Ninja/1.10.2-GCCcore-11.2.0
+		
+Method one
+==================
+Using Miniconda
 
 Custom Environments 
 ==================
@@ -161,7 +165,7 @@ For example create the following environment:
 		(py3_32)user@login*:~> conda config --env --set subdir linux-32
 		(py3_32)user@login*:~> conda install python=3 gxx_linux-32
 
-Enter the work directory (/work) and clone the DEST code into a folder, e.g. DEST-master
+Enter your work directory (/data) and clone the DEST code into a folder, e.g. DEST-master
 
     .. code-block:: console
 		
@@ -169,14 +173,14 @@ Enter the work directory (/work) and clone the DEST code into a folder, e.g. DES
                 git clone https://gitlab.DEST_master 
 
 
-After the code is cloned, enter the DEST folder, make a build directory and enter it
+After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
     .. code-block:: console
 		
 		cd DEST-master
-                cd BIN
+                cd src/BIN
 
 
-From within the build directory, run the configure command. Note the use of CC and CXX to select the special ARC-specific compilers (py3_32 environment).
+From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARC-specific compilers (py3_32 environment).
 
     .. code-block:: console
 		
@@ -185,7 +189,7 @@ From within the build directory, run the configure command. Note the use of CC a
 
 i686-conda_cos6-linux-gnu-cc and i686-conda_cos6-linux-gnu-c++ are the C and C++ wrappers for the Cray utilities and determined by the Miniconda py3_32 environment.
 
-At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
 
     .. code-block:: console
 		
@@ -202,6 +206,51 @@ For testing the executable file you can run the following:
 		
 		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
 		
+Method two
+==================
+Using a multilib version of GCC 11.2.0 which can produce 32bit binaries - to potentially save user using the conda environment. A recipe on 32bit DEST directory, as described below
+     .. code-block:: console
+        
+	   module purge
+           module load CMake/3.21.1-GCCcore-11.2.0
+           module load Ninja/1.10.2-GCCcore-11.2.0
+           module load GCCcore/11.2.0-multilib
+           module load binutils/2.38 
+
+Enter your work directory (/data) and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd /data/engsci-impact-eng-lab/yours
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter the DEST folder, make a build directory and enter it (or cd ../BIN)
+    .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
+		
+ From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special ARC-specific compilers.
+
+    .. code-block:: console
+    
+               cmake -G "Ninja" -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/data/system/ouit0554/users/bronik/DEST-master_32/src/install" /data/system/ouit0554/users/bronik/DEST-master_32/src/CMakeLists.txt
+ 
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
+
+    .. code-block:: console 
+     
+              cmake --build /data/system/ouit0554/users/bronik/DEST-master_32/src --clean-first --config Debug -- "-v"
+ 
+ For testing the executable file you can run the following:
+ 
+    .. code-block:: console
+    
+             ./DEST_analyser_Debug -filename ../TESTS/B_013/B_013.dat
+
+
+
 		
 DEST on Cloud Computing Platforms
 ===================
