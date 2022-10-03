@@ -18,10 +18,17 @@ Introduction
 DEST Input file
 ==============
 
-.. image:: ../../images/input/Slide2x.jpg
+.. image:: ../../images/Slide2x.jpg
    :alt: inp1
+   :align: center
    :class: with-shadow
    :scale: 100
+   
+.. image:: ../../images/Slide3x.jpg
+   :alt: inp1
+   :align: center
+   :class: with-shadow
+   :scale: 100   
 
 DEST Workflow
 ==============
