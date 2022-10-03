@@ -23,6 +23,8 @@ DEST Input file
    :class: with-shadow
    :scale: 100
 
+DEST Workflow
+==============
 
 Visual explanation of the concept
 ---------------------------------
