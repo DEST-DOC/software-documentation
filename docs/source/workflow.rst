@@ -173,6 +173,7 @@ DEST flowchart
 
 .. image:: ../../images/Slide1.jpg
    :alt: flowchar1
+   :align: center
    :class: with-shadow
    :scale: 70
  
