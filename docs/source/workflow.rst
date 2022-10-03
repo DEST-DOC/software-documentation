@@ -182,6 +182,7 @@ DEST flowchart
 
 .. image:: ../../images/Slide2.jpg
    :alt: flowchar2
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -189,6 +190,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide3.jpg
    :alt: flowchar3
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -196,6 +198,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide4.jpg
    :alt: flowchar4
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -203,6 +206,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide5.jpg
    :alt: flowchar5
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -210,6 +214,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide6.jpg
    :alt: flowchar6
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -217,6 +222,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide7.jpg
    :alt: flowchar7
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -224,6 +230,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide8.jpg
    :alt: flowchar8
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -231,6 +238,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide9.jpg
    :alt: flowchar9
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -238,6 +246,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide10.jpg
    :alt: flowchar10
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -245,6 +254,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide11.jpg
    :alt: flowchar11
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -252,6 +262,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide12.jpg
    :alt: flowchar12
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -259,6 +270,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide13.jpg
    :alt: flowchar13
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -266,6 +278,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide14.jpg
    :alt: flowchar14
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -273,6 +286,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide15.jpg
    :alt: flowchar15
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -280,6 +294,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide16.jpg
    :alt: flowchar16
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -287,6 +302,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide17.jpg
    :alt: flowchar17
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -308,6 +324,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide20.jpg
    :alt: flowchar20
+   :align: center
    :class: with-shadow
    :scale: 70
  
@@ -315,6 +332,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide21.jpg
    :alt: flowchar21
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -322,6 +340,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide22.jpg
    :alt: flowchar22
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -329,6 +348,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide23.jpg
    :alt: flowchar23
+   :align: center
    :class: with-shadow
    :scale: 70
   
@@ -336,6 +356,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide24.jpg
    :alt: flowchar24
+   :align: center
    :class: with-shadow
    :scale: 70
 
