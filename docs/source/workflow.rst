@@ -22,7 +22,7 @@ DEST Input file
    :alt: inp1
    :align: center
    :class: with-shadow
-   :scale: 90
+   :scale: 80
 
 ...................
 
