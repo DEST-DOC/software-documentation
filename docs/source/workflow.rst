@@ -25,12 +25,12 @@ DEST flowchart
 .. image:: ../../images/Slide1.jpg
    :alt: flowchar1
    :class: with-shadow
-   :scale: 50
+   :scale: 80
 
 .. image:: ../../images/Slide2.jpg
    :alt: flowchar2
    :class: with-shadow
-   :scale: 50
+   :scale: 80
 
 
 
