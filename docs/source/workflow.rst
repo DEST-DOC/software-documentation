@@ -20,9 +20,6 @@ DEST Input file
    :scale: 100
 
 
-DEST Workflow
-==============
-
 Visual explanation of the concept
 ---------------------------------
 
