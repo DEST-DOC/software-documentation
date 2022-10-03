@@ -1,6 +1,14 @@
 .. _workflow:
 
+DEST Workflow
+==============
 
+Introduction
+------------
+
+- DEST Input file
+- DEST Workflow
+- DEST flowchart
 
 DEST Input file
 ==============
@@ -11,13 +19,8 @@ DEST Input file
    :scale: 100
 
 
-
 DEST Workflow
 ==============
-
-Introduction
-------------
-
 
 Visual explanation of the concept
 ---------------------------------
@@ -31,26 +34,29 @@ Visual explanation of the concept
 DEST flowchart
 ==============
 
+Visual explanation of the concept
+---------------------------------
+
 .. image:: ../../images/Slide1.jpg
    :alt: flowchar1
    :class: with-shadow
    :scale: 70
-   
+---------------------------------   
 .. image:: ../../images/Slide2.jpg
    :alt: flowchar2
    :class: with-shadow
    :scale: 70
-   
+---------------------------------   
 .. image:: ../../images/Slide3.jpg
    :alt: flowchar3
    :class: with-shadow
    :scale: 70
-   
+---------------------------------   
 .. image:: ../../images/Slide4.jpg
    :alt: flowchar4
    :class: with-shadow
    :scale: 70
-   
+---------------------------------   
 .. image:: ../../images/Slide5.jpg
    :alt: flowchar5
    :class: with-shadow
