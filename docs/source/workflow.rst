@@ -76,7 +76,6 @@ DEST flowchart
    :alt: flowchar11
    :class: with-shadow
    :scale: 70
-   
 .. image:: ../../images/Slide12.jpg
    :alt: flowchar12
    :class: with-shadow
