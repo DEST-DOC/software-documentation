@@ -1,13 +1,22 @@
 .. _workflow:
 
 
+
+DEST Input file
+==============
+
+.. image:: ../../images/input/Slide2.jpg
+   :alt: inp1
+   :class: with-shadow
+   :scale: 70
+
+
+
 DEST Workflow
 ==============
 
 Introduction
 ------------
-
-
 
 
 Visual explanation of the concept
