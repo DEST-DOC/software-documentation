@@ -23,7 +23,7 @@ DEST Input file
    :align: center
    :class: with-shadow
    :scale: 90
---------------------------------------------------------
+                                         --------------------------------------------------------
 .. image:: ../../images/Slide3x.jpg
    :alt: inp1
    :align: center
