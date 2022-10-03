@@ -22,13 +22,13 @@ DEST Input file
    :alt: inp1
    :align: center
    :class: with-shadow
-   :scale: 100
-   
+   :scale: 90
+--------------------------------------------------------
 .. image:: ../../images/Slide3x.jpg
    :alt: inp1
    :align: center
    :class: with-shadow
-   :scale: 100   
+   :scale: 90   
 
 DEST Workflow
 ==============
