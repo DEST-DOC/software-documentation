@@ -18,7 +18,7 @@ Introduction
 DEST Input file
 ==============
 
-.. image:: ../../images/input/Slide2.jpg
+.. image:: ../../images/input/Slide2x.jpg
    :alt: inp1
    :class: with-shadow
    :scale: 100
