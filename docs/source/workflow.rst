@@ -32,7 +32,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide3.jpg
+.. image:: ../../images/Slide3.jpg
    :alt: flowchar3
    :class: with-shadow
    :scale: 70
@@ -42,7 +42,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide5.jpg
+.. image:: ../../images/Slide5.jpg
    :alt: flowchar5
    :class: with-shadow
    :scale: 70
@@ -62,7 +62,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide9.jpg
+.. image:: ../../images/Slide9.jpg
    :alt: flowchar9
    :class: with-shadow
    :scale: 70
@@ -72,7 +72,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide11.jpg
+.. image:: ../../images/Slide11.jpg
    :alt: flowchar11
    :class: with-shadow
    :scale: 70
@@ -92,7 +92,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide15.jpg
+.. image:: ../../images/Slide15.jpg
    :alt: flowchar15
    :class: with-shadow
    :scale: 70
@@ -102,7 +102,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide17.jpg
+.. image:: ../../images/Slide17.jpg
    :alt: flowchar17
    :class: with-shadow
    :scale: 70
@@ -122,7 +122,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide21.jpg
+.. image:: ../../images/Slide21.jpg
    :alt: flowchar21
    :class: with-shadow
    :scale: 70
@@ -132,7 +132,7 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
    
-   .. image:: ../../images/Slide23.jpg
+.. image:: ../../images/Slide23.jpg
    :alt: flowchar23
    :class: with-shadow
    :scale: 70
