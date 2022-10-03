@@ -52,7 +52,6 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
 
-
 .. image:: ../../images/Slide7.jpg
    :alt: flowchar7
    :class: with-shadow
@@ -83,7 +82,6 @@ DEST flowchart
    :class: with-shadow
    :scale: 70
 
-
 .. image:: ../../images/Slide13.jpg
    :alt: flowchar13
    :class: with-shadow
@@ -113,7 +111,6 @@ DEST flowchart
    :alt: flowchar18
    :class: with-shadow
    :scale: 70
-
 
 .. image:: ../../images/Slide19.jpg
    :alt: flowchar19
