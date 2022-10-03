@@ -19,3 +19,18 @@ Visual explanation of the concept
    :scale: 100
    
 
+DEST flowchart
+==============
+
+.. image:: ../../images/Slide1.jpg
+   :alt: flowchar1
+   :class: with-shadow
+   :scale: 100
+
+
+
+
+
+
+
+
