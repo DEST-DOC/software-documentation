@@ -128,7 +128,15 @@ For testing the executable file you can run the following:
     .. code-block:: console
 		
 		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
+		
+Now you can start Eclipse and select/create a directory as eclipse-workspace:	
     
+.. image:: ../../images/eclipse5.png
+   :alt: Eclipse5
+   :align: center
+   :class: with-shadow
+   :scale: 90
+
 
 
 How to build and run on CLion 
