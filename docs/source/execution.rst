@@ -55,7 +55,7 @@ then select Eclipse IDE for Scientific Computing and install it:
    :align: center
    :target: https://www.eclipse.org/downloads/packages/installer
    :class: with-shadow
-   :scale: 70
+   :scale: 90
    
 Package Description:
 
