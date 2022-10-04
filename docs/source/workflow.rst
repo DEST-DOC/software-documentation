@@ -184,7 +184,7 @@ DEST flowchart
    :alt: flowchar2
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
   
@@ -192,7 +192,7 @@ DEST flowchart
    :alt: flowchar3
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -200,7 +200,7 @@ DEST flowchart
    :alt: flowchar4
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -208,7 +208,7 @@ DEST flowchart
    :alt: flowchar5
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -216,7 +216,7 @@ DEST flowchart
    :alt: flowchar6
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -224,7 +224,7 @@ DEST flowchart
    :alt: flowchar7
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -232,7 +232,7 @@ DEST flowchart
    :alt: flowchar8
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -240,7 +240,7 @@ DEST flowchart
    :alt: flowchar9
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -248,7 +248,7 @@ DEST flowchart
    :alt: flowchar10
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -256,7 +256,7 @@ DEST flowchart
    :alt: flowchar11
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -264,7 +264,7 @@ DEST flowchart
    :alt: flowchar12
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -272,7 +272,7 @@ DEST flowchart
    :alt: flowchar13
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -280,7 +280,7 @@ DEST flowchart
    :alt: flowchar14
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -288,7 +288,7 @@ DEST flowchart
    :alt: flowchar15
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -296,7 +296,7 @@ DEST flowchart
    :alt: flowchar16
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -304,21 +304,21 @@ DEST flowchart
    :alt: flowchar17
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
 .. image:: ../../images/Slide18.jpg
    :alt: flowchar18
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
 .. image:: ../../images/Slide19.jpg
    :alt: flowchar19
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -326,7 +326,7 @@ DEST flowchart
    :alt: flowchar20
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
    
@@ -334,7 +334,7 @@ DEST flowchart
    :alt: flowchar21
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -342,7 +342,7 @@ DEST flowchart
    :alt: flowchar22
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -350,7 +350,7 @@ DEST flowchart
    :alt: flowchar23
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
   
 ...................
   
@@ -358,5 +358,5 @@ DEST flowchart
    :alt: flowchar24
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
 
