@@ -58,6 +58,7 @@ then select Eclipse IDE for Scientific Computing and install it:
    :class: with-shadow
    :scale: 80
    
+
 Package Description:
 
            .. code-block:: console
@@ -71,6 +72,7 @@ Package Description:
                       Mylyn Task List
                       Parallel Tools Platform
                       Eclipse XML Editors and Tools	
+
 
 
 
