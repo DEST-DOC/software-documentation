@@ -143,7 +143,7 @@ then
    :alt: Eclipse6
    :align: center
    :class: with-shadow
-   :scale: 90
+   :scale: 70
 
 How to build and run on CLion 
 =======================
