@@ -175,7 +175,7 @@ DEST flowchart
    :alt: flowchar1
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 50
  
 ...................
 
