@@ -49,17 +49,17 @@ Once you have downloaded the installer, you can run Eclipse installer.
 
 
 then select Eclipse IDE for Scientific Computing and install it:
-
 .. image:: ../../images/eclipse2.png
    :alt: Eclipse2 
    :target: https://www.eclipse.org/downloads/packages/installer
    :class: with-shadow
    :scale: 50
    
-   
-    .. code-block:: console
+Package Description:
+
+           .. code-block:: console
 		
-	              	Package Description
+	              	
                   Tools for C, C++, Fortran, and UPC, including MPI, OpenMP, OpenACC, a parallel debugger, and remotely building, running and monitoring applications.
 
                   This package includes:
