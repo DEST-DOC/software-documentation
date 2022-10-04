@@ -136,7 +136,7 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    :align: center
    :class: with-shadow
    :scale: 90
-
+then
 
 
 How to build and run on CLion 
