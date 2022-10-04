@@ -74,6 +74,61 @@ Package Description:
                       Eclipse XML Editors and Tools	
 
 
+Next, enter the work directory (your working directory) and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd yourwork
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter your work folder, make a build directory outside DEST folder and enter it
+    .. code-block:: console
+		mkdir Build
+		cd Build
+
+
+From within the build directory, run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
+
+    .. code-block:: console
+		
+	cmake -G "Eclipse CDT4 - Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/home/kevinb/Videos/DEST-master/src/Install"  -DCMAKE_C_COMPILER="/usr/bin/cc"  -DCMAKE_CXX_COMPILER="/usr/bin/c++"  /home/kevinb/Videos/DEST-master/src/CMakeLists.txt
+	
+If compiling and generation using cmake was successful you will see something similar to the following:
+
+.. image:: ../../images/eclipse3.png
+   :alt: Eclipse3
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
+
+    .. code-block:: console
+		
+		cmake --build /home/kevinb/Videos/Build  --clean-first  --config Debug -- "-v"
+
+Finally, if building using cmake was successful you will see something similar to the following:
+
+.. image:: ../../images/eclipse4.png
+   :alt: Eclipse4
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+
+Then check the executable file in ../DEST-master/src/BIN
+
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
+    .. code-block:: console
+		
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
+    
 
 
 How to build and run on CLion 
