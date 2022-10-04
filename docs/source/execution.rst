@@ -137,8 +137,9 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    :class: with-shadow
    :scale: 90
    
-   
-then click on import project with existing makefile
+
+
+then click on import a project with working makefile
 
 
 .. image:: ../../images/eclipse6.png
@@ -148,8 +149,8 @@ then click on import project with existing makefile
    :scale: 70
  
  
-then
- 
+fill the project name, etc as shown in figure
+
  .. image:: ../../images/eclipse7.png
    :alt: Eclipse7
    :align: center
@@ -162,7 +163,7 @@ then
    :alt: Eclipse8
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 60
    
 
 then
@@ -171,7 +172,7 @@ then
    :alt: Eclipse9
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 60
 
  then
  
@@ -179,7 +180,7 @@ then
    :alt: Eclipse10
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 60
    
 then
  
@@ -187,7 +188,7 @@ then
    :alt: Eclipse11
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 60
    
 then
  
@@ -195,7 +196,7 @@ then
    :alt: Eclipse12
    :align: center
    :class: with-shadow
-   :scale: 70
+   :scale: 60
    
 How to build and run on CLion 
 =======================
