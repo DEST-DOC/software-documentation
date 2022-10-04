@@ -94,7 +94,7 @@ From within the build directory, run the configure command (with updated path!).
 		
 	cmake -G "Eclipse CDT4 - Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/home/kevinb/Videos/DEST-master/src/Install"  -DCMAKE_C_COMPILER="/usr/bin/cc"  -DCMAKE_CXX_COMPILER="/usr/bin/c++"  /home/kevinb/Videos/DEST-master/src/CMakeLists.txt
 	
-If compiling and generation using cmake was successful you will see something similar to the following:
+If configuring and generating using CMake were successful you will see something similar to the following:
 
 .. image:: ../../images/eclipse3.png
    :alt: Eclipse3
@@ -109,7 +109,7 @@ At this point you can run cmake .. to e.g. disable unnecessary solvers, then run
 		
 		cmake --build /home/kevinb/Videos/Build  --clean-first  --config Debug -- "-v"
 
-Finally, if building using cmake was successful you will see something similar to the following:
+Finally, if building using CMake was successful you will see something similar to the following:
 
 .. image:: ../../images/eclipse4.png
    :alt: Eclipse4
