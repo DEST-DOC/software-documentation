@@ -310,6 +310,7 @@ DEST flowchart
   
 .. image:: ../../images/Slide18.jpg
    :alt: flowchar18
+   :align: center
    :class: with-shadow
    :scale: 50
  
@@ -317,6 +318,7 @@ DEST flowchart
    
 .. image:: ../../images/Slide19.jpg
    :alt: flowchar19
+   :align: center
    :class: with-shadow
    :scale: 50
  
