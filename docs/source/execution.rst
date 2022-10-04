@@ -45,16 +45,18 @@ First, you should download and install your favorite desktop IDE packages (links
 
 Once you have downloaded the installer, you can run Eclipse installer.
 
-.. Note:: For more detailed approch visit https://www.eclipse.org/downloads/packages/installer
+.. Note:: For more detailed approach visit https://www.eclipse.org/downloads/packages/installer
+
 
 
 then select Eclipse IDE for Scientific Computing and install it:
+
 
 .. image:: ../../images/eclipse2.png
    :alt: Eclipse2
    :align: center
    :class: with-shadow
-   :scale: 90
+   :scale: 80
    
 Package Description:
 
