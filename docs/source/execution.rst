@@ -136,8 +136,14 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    :align: center
    :class: with-shadow
    :scale: 90
+   
 then
 
+.. image:: ../../images/eclipse6.png
+   :alt: Eclipse6
+   :align: center
+   :class: with-shadow
+   :scale: 90
 
 How to build and run on CLion 
 =======================
