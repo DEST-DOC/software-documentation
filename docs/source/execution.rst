@@ -53,7 +53,6 @@ then select Eclipse IDE for Scientific Computing and install it:
 .. image:: ../../images/eclipse2.png
    :alt: Eclipse2
    :align: center
-   :target: https://www.eclipse.org/downloads/packages/installer
    :class: with-shadow
    :scale: 90
    
