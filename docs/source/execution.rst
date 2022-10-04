@@ -137,15 +137,18 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    :class: with-shadow
    :scale: 90
    
+   
 then click on import project with existing makefile
+
 
 .. image:: ../../images/eclipse6.png
    :alt: Eclipse6
    :align: center
    :class: with-shadow
    :scale: 70
-   
- then
+ 
+ 
+then
  
  .. image:: ../../images/eclipse7.png
    :alt: Eclipse7
@@ -153,7 +156,7 @@ then click on import project with existing makefile
    :class: with-shadow
    :scale: 70
 
- then
+then
  
  .. image:: ../../images/eclipse8.png
    :alt: Eclipse8
@@ -162,7 +165,7 @@ then click on import project with existing makefile
    :scale: 70
    
 
- then
+then
  
  .. image:: ../../images/eclipse9.png
    :alt: Eclipse9
@@ -178,7 +181,7 @@ then click on import project with existing makefile
    :class: with-shadow
    :scale: 70
    
- then
+then
  
  .. image:: ../../images/eclipse11.png
    :alt: Eclipse11
@@ -186,7 +189,7 @@ then click on import project with existing makefile
    :class: with-shadow
    :scale: 70
    
- then
+then
  
  .. image:: ../../images/eclipse12.png
    :alt: Eclipse12
