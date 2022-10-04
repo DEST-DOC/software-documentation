@@ -38,7 +38,7 @@ Installing Eclipse
    :alt: Eclipse1 
    :target: https://www.eclipse.org/downloads/
    :class: with-shadow
-   :scale: 30
+   :scale: 100
 
 First, you should download and install your favorite desktop IDE packages (links to the various Eclipse versions on the Eclipse website: https://www.eclipse.org/downloads/)
 
@@ -47,13 +47,14 @@ Once you have downloaded the installer, you can run Eclipse installer.
 
 .. Note:: For more detailed approch visit https://www.eclipse.org/downloads/packages/installer
 
+
 then select Eclipse IDE for Scientific Computing and install it:
 
 .. image:: ../../images/eclipse2.png
    :alt: Eclipse2 
    :target: https://www.eclipse.org/downloads/packages/installer
    :class: with-shadow
-   :scale: 30
+   :scale: 50
    
    
     .. code-block:: console
