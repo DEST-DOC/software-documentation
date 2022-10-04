@@ -51,10 +51,11 @@ Once you have downloaded the installer, you can run Eclipse installer.
 then select Eclipse IDE for Scientific Computing and install it:
 
 .. image:: ../../images/eclipse2.png
-   :alt: Eclipse2 
+   :alt: Eclipse2
+   :align: center
    :target: https://www.eclipse.org/downloads/packages/installer
    :class: with-shadow
-   :scale: 50
+   :scale: 70
    
 Package Description:
 
