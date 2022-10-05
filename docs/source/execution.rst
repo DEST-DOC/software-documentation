@@ -52,7 +52,7 @@ Once you have downloaded the installer, you can run Eclipse installer.
 then select Eclipse IDE for Scientific Computing and install it:
 
 
-.. image:: ../../images/eclipse2.png
+ .. image:: ../../images/eclipse2.png
    :alt: Eclipse2
    :align: center
    :class: with-shadow
@@ -96,7 +96,7 @@ From within the build directory, run the configure command (with updated path!).
 	
 If configuring and generating using CMake were successful you will see something similar to the following:
 
-.. image:: ../../images/eclipse3.png
+ .. image:: ../../images/eclipse3.png
    :alt: Eclipse3
    :align: center
    :class: with-shadow
@@ -113,7 +113,7 @@ At this point you can run cmake .. to e.g. disable unnecessary solvers, then run
 
 Finally, if building using CMake was successful you will see something similar to the following:
 
-.. image:: ../../images/eclipse4.png
+ .. image:: ../../images/eclipse4.png
    :alt: Eclipse4
    :align: center
    :class: with-shadow
