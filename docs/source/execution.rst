@@ -33,10 +33,35 @@ First, you should download and install your favorite desktop IDE packages (links
 
 Once you have downloaded the installer, you can run the installer.
 
-.. Note:: For more detailed approach visit https://code.visualstudio.com/docs, Visual Studio Code Docs Documentation for Visual Studio Code, including Getting Started videos Visual Studio Code Introductory Videos 
+.. Note:: For more detailed approach visit https://code.visualstudio.com/docs [Visual Studio Code Docs Documentation for Visual Studio Code, including Getting Started videos Visual Studio Code Introductory Videos] 
+
+Next, enter the work directory (your working directory) and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd yourwork
+                git clone https://gitlab.DEST_master 
 
 
- 
+After the code is cloned, start Visual Studio Code
+
+
+ .. image:: ../../images/vsc2.png
+   :alt: VSC2
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+click on yes I trust authors of the code
+
+ .. image:: ../../images/vsc3.png
+   :alt: VSC3
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+
+
 How to build and run on Eclipse 
 =======================
 
