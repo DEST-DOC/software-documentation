@@ -70,6 +70,15 @@ now you will be able to see DEST project inside Visual Studio Code-IDE. Click on
    :class: with-shadow
    :scale: 80
 
+install the following extensions in visual studio code
+
+ .. image:: ../../images/vsc0.png
+   :alt: VSC0
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+
 select [unspecified] let CMake guess what compiler and environment to use
 
  .. image:: ../../images/vsc5.png
@@ -86,6 +95,51 @@ configuring and generating and build will be done (the executable file in ../DES
    :class: with-shadow
    :scale: 80  
 
+next you need create a launch json file as shown in figure
+
+ .. image:: ../../images/vsc7.png
+   :alt: VSC7
+   :align: center
+   :class: with-shadow
+   :scale: 80 
+
+then you need to modify the json file as follows
+
+        .. code-block:: console
+	
+	{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+  
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/BIN/DEST_analyser_Debug",
+            "args": ["-filename","/home/kevinb/Music/DEST-master2/src/TESTS/B_013/B_013.dat"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description":  "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+                ]
+              }, 
+            ]
+         }
 
 
 How to build and run on Eclipse 
