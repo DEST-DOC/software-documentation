@@ -103,11 +103,13 @@ If configuring and generating using CMake were successful you will see something
    :scale: 80
 
 
+
 At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
 
     .. code-block:: console
 		
 		cmake --build /home/kevinb/Videos/Build  --clean-first  --config Debug -- "-v"
+
 
 Finally, if building using CMake was successful you will see something similar to the following:
 
@@ -118,17 +120,21 @@ Finally, if building using CMake was successful you will see something similar t
    :scale: 80
 
 
+
 Then check the executable file in ../DEST-master/src/BIN
 
     .. code-block:: console
     
 		file DEST_analyser_Debug
 
+
 For testing the executable file you can run the following:
     .. code-block:: console
 		
 		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
-		
+
+
+
 Now you can start Eclipse and select/create a directory as eclipse-workspace:	
     
 .. image:: ../../images/eclipse5.png
@@ -139,7 +145,7 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    
 
 
-then click on import a project with working makefile
+then click on import a project with working Makefile
 
 
 .. image:: ../../images/eclipse6.png
@@ -149,7 +155,7 @@ then click on import a project with working makefile
    :scale: 70
  
  
-fill the project name, etc as shown in figure
+fill the project name, existing code location, etc. click on finish button as shown in figure
 
  .. image:: ../../images/eclipse7.png
    :alt: Eclipse7
@@ -157,7 +163,8 @@ fill the project name, etc as shown in figure
    :class: with-shadow
    :scale: 70
 
-then
+
+now you will be able to see DEST project inside Eclipse-IDE. To view or edit a project's properties, right-click the project  and select Properties and select C/C++ build and fill it as follows (note that ninja should be already installed on system)
  
  .. image:: ../../images/eclipse8.png
    :alt: Eclipse8
