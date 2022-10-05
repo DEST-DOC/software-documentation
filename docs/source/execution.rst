@@ -148,9 +148,10 @@ Now you can start Eclipse and select/create a directory as eclipse-workspace:
    :class: with-shadow
    :scale: 90
    
-
-
+   
+   
 then click on import a project with working Makefile
+
 
 
 .. image:: ../../images/eclipse6.png
@@ -159,8 +160,8 @@ then click on import a project with working Makefile
    :class: with-shadow
    :scale: 70
  
- 
- 
+
+
 fill the project name, existing code location, etc. click on finish button as shown in figure
 
 
@@ -216,7 +217,7 @@ to configure run, right-click the project again and select run configurations an
    :scale: 60
    
    
-finally click on run button and you will see that the solver will start running
+finally, click on run button and you will see that the solver will start running
  
  
  .. image:: ../../images/eclipse12.png
@@ -224,7 +225,9 @@ finally click on run button and you will see that the solver will start running
    :align: center
    :class: with-shadow
    :scale: 60
-   
+
+
+you have now able to run and debug the code using Eclipse-IDE.
    
 How to build and run on CLion 
 =======================
