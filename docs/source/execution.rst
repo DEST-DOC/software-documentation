@@ -61,16 +61,7 @@ click on yes, I trust authors (of the code)
    :scale: 80
 
 
-now you will be able to see DEST project inside Visual Studio Code-IDE. Click on build button as shown in figure
-
-
- .. image:: ../../images/vsc4.png
-   :alt: VSC4
-   :align: center
-   :class: with-shadow
-   :scale: 80
-
-install the following extensions in visual studio code
+now you will be able to see DEST project inside Visual Studio Code-IDE. Nesxt you need to install the following extensions in visual studio code
 
  .. image:: ../../images/vsc0.png
    :alt: VSC0
@@ -79,13 +70,24 @@ install the following extensions in visual studio code
    :scale: 80
 
 
+then click on build button as shown in figure
+
+
+ .. image:: ../../images/vsc4.png
+   :alt: VSC4
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+
+
 select [unspecified] let CMake guess what compiler and environment to use
 
  .. image:: ../../images/vsc5.png
    :alt: VSC5
    :align: center
    :class: with-shadow
-   :scale: 80
+   :scale: 60
 
 configuring and generating and build will be done (the executable file in ../DEST-master/src/BIN), as shown in figure
 
@@ -93,7 +95,7 @@ configuring and generating and build will be done (the executable file in ../DES
    :alt: VSC6
    :align: center
    :class: with-shadow
-   :scale: 80  
+   :scale: 60  
 
 next you need create a launch json file as shown in figure
 
@@ -101,7 +103,7 @@ next you need create a launch json file as shown in figure
    :alt: VSC7
    :align: center
    :class: with-shadow
-   :scale: 80 
+   :scale: 60 
 
 then you need to modify the json file as follows
 
