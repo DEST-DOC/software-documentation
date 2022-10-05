@@ -169,7 +169,7 @@ fill the project name, existing code location, etc. click on finish button as sh
    :scale: 70
 
 
-now you will be able to see DEST project inside Eclipse-IDE. To view or edit the project's properties, right-click the project and select Properties and then select C/C++ build and fill it as follows (note that ninja should be already installed on system)
+now you will be able to see DEST project inside Eclipse-IDE. To view or edit the project's properties, right-click the project and select Properties and then select C/C++ build and fill it as follows (note that ninja should be already installed on system) [apply and close]
  
  
  .. image:: ../../images/eclipse8.png
@@ -179,7 +179,7 @@ now you will be able to see DEST project inside Eclipse-IDE. To view or edit the
    :scale: 60
    
 
-right-click the project again and select debug configurations and change it as the follows
+right-click the project again and select debug configurations and change it as the follows [apply and close]
 
  
  .. image:: ../../images/eclipse9.png
@@ -190,7 +190,7 @@ right-click the project again and select debug configurations and change it as t
 
 
 
-on the same window click Arguments and enter the arguments for DEST (e.g. -filename   /home/kevinb/Videos/DEST-master/src/TESTS/B_013/B_013.dat)
+on the same window click Arguments and enter the arguments for DEST (e.g. -filename   /home/kevinb/Videos/DEST-master/src/TESTS/B_013/B_013.dat) [apply and close]
 
 
 
@@ -203,7 +203,7 @@ on the same window click Arguments and enter the arguments for DEST (e.g. -filen
    
    
    
-to configure run, right-click the project again and select run configurations and change it as the follows
+to configure run, right-click the project again and select run configurations and change it as the follows [apply and close]
 
 
 
