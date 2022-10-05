@@ -43,7 +43,7 @@ Next, enter the work directory (your working directory) and clone the DEST code 
                 git clone https://gitlab.DEST_master 
 
 
-After the code is cloned, start Visual Studio Code
+After the code is cloned, start Visual Studio Code, and select open folder, and choose the root directory DEST
 
 
  .. image:: ../../images/vsc2.png
@@ -52,13 +52,39 @@ After the code is cloned, start Visual Studio Code
    :class: with-shadow
    :scale: 80
 
-click on yes I trust authors of the code
+click on yes, I trust authors (of the code)
 
  .. image:: ../../images/vsc3.png
    :alt: VSC3
    :align: center
    :class: with-shadow
    :scale: 80
+
+
+now you will be able to see DEST project inside Visual Studio Code-IDE. Click on build button as shown in figure
+
+
+ .. image:: ../../images/vsc4.png
+   :alt: VSC4
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+select [unspecified] let CMake guess what compiler and environment to use
+
+ .. image:: ../../images/vsc5.png
+   :alt: VSC5
+   :align: center
+   :class: with-shadow
+   :scale: 80
+
+configuring and generating and build will be done (the executable file in ../DEST-master/src/BIN), as shown in figure
+
+ .. image:: ../../images/vsc6.png
+   :alt: VSC6
+   :align: center
+   :class: with-shadow
+   :scale: 80  
 
 
 
