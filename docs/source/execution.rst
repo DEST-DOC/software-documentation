@@ -19,16 +19,24 @@ The "make" (as an older version of "cmake") approach to compiling and linking th
 How to build and run on Visual Studio Code 
 =====================
 
-Visual Studio Code download 
+
+Installing Visual Studio Code 
+==================
+.. image:: ../../images/vsc1.png
+   :alt: VSC1 
+   :target: https://code.visualstudio.com/
+   :class: with-shadow
+   :scale: 100
+
+First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio Code versions on the Visual Studio Code website: https://code.visualstudio.com/)
 
 
-Visual Studio Code Docs Documentation for Visual Studio Code, including Getting Started videos Visual Studio Code Introductory Videos 
+Once you have downloaded the installer, you can run the installer.
+
+.. Note:: For more detailed approach visit https://code.visualstudio.com/docs, Visual Studio Code Docs Documentation for Visual Studio Code, including Getting Started videos Visual Studio Code Introductory Videos 
 
 
-Open DEST repository (http://isml-grs.eng.ox.ac.uk:8000) 
-
-
-
+ 
 How to build and run on Eclipse 
 =======================
 
