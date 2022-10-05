@@ -382,35 +382,35 @@ After the code is cloned, start CLion and select open folder, and choose the roo
    :alt: CL1
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 80
 
  .. image:: ../../images/cl2.png
    :alt: CL2
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 50
 
  .. image:: ../../images/cl3.png
    :alt: CL3
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 50
    
    
  .. image:: ../../images/cl4.png
    :alt: CL4
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 50
    
  .. image:: ../../images/cl5.png
    :alt: CL5
    :align: center
    :class: with-shadow
-   :scale: 60   
+   :scale: 50   
    
  .. image:: ../../images/cl6.png
    :alt: CL6
    :align: center
    :class: with-shadow
-   :scale: 60     
+   :scale: 50     
