@@ -359,7 +359,7 @@ Installing CLion
    :alt: CL0
    :target: https://www.jetbrains.com/clion/
    :class: with-shadow
-   :scale: 100
+   :scale: 70
 
 First, you should download and install your favorite desktop IDE packages (links to the various CLion versions on the CLion website: https://www.jetbrains.com/clion/)
 
