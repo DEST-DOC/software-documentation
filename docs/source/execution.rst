@@ -139,22 +139,19 @@ For testing the executable file you can run the following:
 
 Now you can start Eclipse and select/create a directory as eclipse-workspace:	
   
-  
-  
-  
-.. image:: ../../images/eclipse5.png
+ 
+ .. image:: ../../images/eclipse5.png
    :alt: Eclipse5
    :align: center
    :class: with-shadow
    :scale: 90
    
    
-   
 then click on import a project with working Makefile
 
 
 
-.. image:: ../../images/eclipse6.png
+ .. image:: ../../images/eclipse6.png
    :alt: Eclipse6
    :align: center
    :class: with-shadow
