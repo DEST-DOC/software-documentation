@@ -382,7 +382,7 @@ After the code is cloned, start CLion and select open folder, and choose the roo
    :alt: CL1
    :align: center
    :class: with-shadow
-   :scale: 80
+   :scale: 90
 
  .. image:: ../../images/cl2.png
    :alt: CL2
