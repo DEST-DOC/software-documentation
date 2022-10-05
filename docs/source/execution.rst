@@ -61,7 +61,7 @@ click on yes, I trust authors (of the code)
    :scale: 80
 
 
-now you will be able to see DEST project inside Visual Studio Code-IDE. Nesxt you need to install the following extensions in visual studio code
+now you will be able to see DEST project inside Visual Studio Code-IDE. Next you need to install the following extensions in visual studio code
 
  .. image:: ../../images/vsc0.png
    :alt: VSC0
@@ -121,7 +121,7 @@ then you need to modify the json file as follows
                 "type": "cppdbg",
                 "request": "launch",
                 "program": "${workspaceFolder}/BIN/DEST_analyser_Debug",
-                "args": ["-filename","/home/kevinb/Music/DEST-master2/src/TESTS/B_013/B_013.dat"],
+                "args": ["-filename","yours/DEST-master/src/TESTS/B_013/B_013.dat"],  <-- need to be modified!
                 "stopAtEntry": false,
                 "cwd": "${fileDirname}",
                 "environment": [],
