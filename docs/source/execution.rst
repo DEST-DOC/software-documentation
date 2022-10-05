@@ -135,8 +135,13 @@ For testing the executable file you can run the following:
 
 
 
+
+
 Now you can start Eclipse and select/create a directory as eclipse-workspace:	
-    
+  
+  
+  
+  
 .. image:: ../../images/eclipse5.png
    :alt: Eclipse5
    :align: center
@@ -155,7 +160,9 @@ then click on import a project with working Makefile
    :scale: 70
  
  
+ 
 fill the project name, existing code location, etc. click on finish button as shown in figure
+
 
  .. image:: ../../images/eclipse7.png
    :alt: Eclipse7
@@ -164,7 +171,8 @@ fill the project name, existing code location, etc. click on finish button as sh
    :scale: 70
 
 
-now you will be able to see DEST project inside Eclipse-IDE. To view or edit a project's properties, right-click the project  and select Properties and select C/C++ build and fill it as follows (note that ninja should be already installed on system)
+now you will be able to see DEST project inside Eclipse-IDE. To view or edit the project's properties, right-click the project and select Properties and then select C/C++ build and fill it as follows (note that ninja should be already installed on system)
+ 
  
  .. image:: ../../images/eclipse8.png
    :alt: Eclipse8
@@ -173,7 +181,8 @@ now you will be able to see DEST project inside Eclipse-IDE. To view or edit a p
    :scale: 60
    
 
-then
+right-click the project again and select debug configurations and change it as the follows
+
  
  .. image:: ../../images/eclipse9.png
    :alt: Eclipse9
@@ -181,29 +190,41 @@ then
    :class: with-shadow
    :scale: 60
 
- then
- 
+
+
+on the same window click Arguments and enter the arguments for DEST (e.g. -filename   /home/kevinb/Videos/DEST-master/src/TESTS/B_013/B_013.dat)
+
+
+
  .. image:: ../../images/eclipse10.png
    :alt: Eclipse10
    :align: center
    :class: with-shadow
    :scale: 60
    
-then
- 
+   
+   
+   
+to configure run, right-click the project again and select run configurations and change it as the follows
+
+
+
  .. image:: ../../images/eclipse11.png
    :alt: Eclipse11
    :align: center
    :class: with-shadow
    :scale: 60
    
-then
+   
+finally click on run button and you will see that the solver will start running
+ 
  
  .. image:: ../../images/eclipse12.png
    :alt: Eclipse12
    :align: center
    :class: with-shadow
    :scale: 60
+   
    
 How to build and run on CLion 
 =======================
