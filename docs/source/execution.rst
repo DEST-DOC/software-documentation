@@ -97,7 +97,7 @@ configuring and generating and build will be done (the executable file in ../DES
    :class: with-shadow
    :scale: 60  
 
-next you need create a launch json file as shown in figure
+next you need to create a launch json file (this will create a folder with the name .vscode and a file within with the name launch.json)
 
  .. image:: ../../images/vsc7.png
    :alt: VSC7
