@@ -353,6 +353,64 @@ you are now able to run and debug the code using Eclipse-IDE.
 How to build and run on CLion 
 =======================
 
-Currently the only IDE that can generate all three executables (DEST_analyser, DEST_optimiser and DEST_conveyor) for Windows. 
+Installing CLion
+==================
+.. image:: ../../images/cl0.png
+   :alt: CL0
+   :target: https://www.jetbrains.com/clion/
+   :class: with-shadow
+   :scale: 100
 
-The "make" (as an older version of "cmake") approach to compiling and linking the code on all platforms should also work, but needs updating to ensure that is works (rather than just on Linux) on Windows and macOS. 	
+First, you should download and install your favorite desktop IDE packages (links to the various CLion versions on the CLion website: https://www.jetbrains.com/clion/)
+
+
+Once you have downloaded the installer, you can run the installer.
+
+.. Note:: For more detailed approach visit https://www.jetbrains.com/clion/ 
+
+Next, enter the work directory (your working directory) and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd yourwork
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, start CLion and select open folder, and choose the root directory DEST 
+
+ .. image:: ../../images/cl1.png
+   :alt: CL1
+   :align: center
+   :class: with-shadow
+   :scale: 60
+
+ .. image:: ../../images/cl2.png
+   :alt: CL2
+   :align: center
+   :class: with-shadow
+   :scale: 60
+
+ .. image:: ../../images/cl3.png
+   :alt: CL3
+   :align: center
+   :class: with-shadow
+   :scale: 60
+   
+   
+ .. image:: ../../images/cl4.png
+   :alt: CL4
+   :align: center
+   :class: with-shadow
+   :scale: 60
+   
+ .. image:: ../../images/cl5.png
+   :alt: CL5
+   :align: center
+   :class: with-shadow
+   :scale: 60   
+   
+ .. image:: ../../images/cl6.png
+   :alt: CL6
+   :align: center
+   :class: with-shadow
+   :scale: 60     
