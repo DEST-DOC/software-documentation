@@ -399,11 +399,77 @@ Xcode 9.4.1 and the macOS 10.13 SDK are the last versions capable of building 32
 
 .. Note:: For more detailed approach visit https://github.com/mrpippy/XcodeNueve
 
+First you need to install Mac Ports:
+
+      .. code-block:: console
+      
+           sudo xcode-select --install   [if you have already installed Xcode 9.4.1 you need to skip this step]
+           sudo xcodebuild -license
+           Install latest dmg package from http://www.macports.org/
+           Install latest XQuartz package from http://www.xquartz.org/
+           set in .bashrc: export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+	   
+next you need to install the following:
+          
+	  .. code-block:: console
+	  
+	      sudo port install llvm-11
+              sudo port install clang-9.0
+	      
+Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
+
+    .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
+	      
+Before compiling and  Building you need to modify the following lines in DEST root/CMakeLists.txt
+         
+	 .. code-block:: console
+
+                   if (${APPLE})
+                          set (CMAKE_C_COMPILER "/opt/local/libexec/llvm-9.0/bin/clang")
+                          set (CMAKE_CXX_COMPILER "/opt/local/libexec/llvm-9.0/bin/clang++")
+                   endif ()
+
+From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
+
+            .. code-block:: console
+	    
+                    cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/Users/kevinbronik/Desktop/out/install/Linux-GCC-Debug"  -DCMAKE_C_COMPILER="/opt/local/libexec/llvm-9.0/bin/clang"  -DCMAKE_CXX_COMPILER="/opt/local/libexec/llvm-9.0/bin/clang++"  /Users/kevinbronik/Desktop/src/CMakeLists.txt
+
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
+
+    .. code-block:: console
+		
+		cmake --build /Users/kevinbronik/Desktop/src  --clean-first  --config Debug -- "-v"
+		
+Then check the executable file
+
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
+    .. code-block:: console
+		
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
+
+
 
 How to build and run on Linux
 =====================
 
-first you need to install CMake (if it is not already installed)
+First you need to install CMake (if it is not already installed!)
 
     .. code-block:: console 
     
