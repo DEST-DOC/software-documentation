@@ -376,7 +376,7 @@ Next, enter the work directory (your working directory) and clone the DEST code 
                 git clone https://gitlab.DEST_master 
 
 
-After the code is cloned, start CLion and select open folder, and choose the root directory DEST 
+After the code is cloned, start CLion and select open (folder), and choose the root directory DEST 
 
  .. image:: ../../images/cl1.png
    :alt: CL1
@@ -384,11 +384,19 @@ After the code is cloned, start CLion and select open folder, and choose the roo
    :class: with-shadow
    :scale: 90
 
+
+click on next
+
+
  .. image:: ../../images/cl2.png
    :alt: CL2
    :align: center
    :class: with-shadow
    :scale: 50
+   
+   
+click on finish
+
 
  .. image:: ../../images/cl3.png
    :alt: CL3
@@ -396,19 +404,32 @@ After the code is cloned, start CLion and select open folder, and choose the roo
    :class: with-shadow
    :scale: 50
    
-   
+as showon in the following figure select Edit Configuration
+
+
  .. image:: ../../images/cl4.png
    :alt: CL4
    :align: center
    :class: with-shadow
    :scale: 50
-   
+
+
+enter the arguments for DEST shown as  the following:
+    .. code-block:: console
+		
+		-filename  path to/TESTS/B_013/B_013.dat
+
+
  .. image:: ../../images/cl5.png
    :alt: CL5
    :align: center
    :class: with-shadow
    :scale: 50   
-   
+
+
+you are now able to run and debug the code using CLion-IDE.
+
+
  .. image:: ../../images/cl6.png
    :alt: CL6
    :align: center
