@@ -316,7 +316,7 @@ For example:
 		
 After you have installed Miniconda and setup your environment to access it, after that you can install whatever packages you wish using the conda install ... command. 
 
-Then install cmake and create the following environment: 
+Then install CMake and create the following environment: 
 
     .. code-block:: console
     
@@ -395,41 +395,15 @@ Requirement:
 How to build and run on macOS
 =====================
 
-Requirement: 
+Xcode 9.4.1 and the macOS 10.13 SDK are the last versions capable of building 32-bit Intel (i386) binaries, thus you would need either Xcode 9.4.1 or earlier version or a hack allowing the use of Xcode 9's toolchain on macOS Catalina, Big Sur, and Monterey.
 
-Add public ssh key to Gitlab server 
-
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
-
-brew update 
-
-brew install llvm libomp 
-
-brew install cmake 
-
-Git clone "http://isml-grs.eng.ox.ac.uk:8000/DEST/DEST.git"  
-
- 
-
-Compile 
-
-cd DEST/BIN 
-
-cmake -DCMAKE_C_COMPILER="/usr/local/opt/llvm/bin/clang" -DCMAKE_CXX_COMPILER="/usr/local/opt/llvm/bin/clang++" .. 
-
-make -j 12 
-
- 
-
-Test  
-
-./ANALYSER_ -filename ../TESTS/B_005/B_005.dat 
+.. Note:: For more detailed approach visit https://github.com/mrpippy/XcodeNueve
 
 
 How to build and run on Linux
 =====================
 
-first you need to install cmake (if it is not already installed)
+first you need to install CMake (if it is not already installed)
 
     .. code-block:: console 
     
@@ -440,7 +414,7 @@ first you need to install cmake (if it is not already installed)
         sudo make install
         cmake --version
 	
-then you would need to install ninja, gcc-multilib and g++-multilib
+next you would need to install ninja, gcc-multilib and g++-multilib
         
 	.. code-block:: console
       
@@ -488,10 +462,5 @@ For testing the executable file you can run the following:
     .. code-block:: console
 		
 		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
-
-
- 
-
-
 
 
