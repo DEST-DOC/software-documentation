@@ -404,7 +404,7 @@ click on finish
    :class: with-shadow
    :scale: 50
    
-as showon in the following figure select Edit Configuration
+as shown in the following figure select Edit Configuration
 
 
  .. image:: ../../images/cl4.png
@@ -414,7 +414,7 @@ as showon in the following figure select Edit Configuration
    :scale: 50
 
 
-enter the arguments for DEST shown as  the following:
+enter the arguments for DEST as shown in the following figure:
     .. code-block:: console
 		
 		-filename  path to/TESTS/B_013/B_013.dat
