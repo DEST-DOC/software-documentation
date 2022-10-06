@@ -429,7 +429,68 @@ Test
 How to build and run on Linux
 =====================
 
-Requirement: 
+first you need to install cmake (if it is not already installed)
+
+    .. code-block:: console 
+    
+        wget https://github.com/Kitware/CMake/releases/download/v3.20.0/cmake-3.20.0.tar.gz
+        tar -zxvf cmake-3.20.0.tar.gz
+        cd cmake-3.20.0
+       ./bootstrap
+        sudo make install
+        cmake --version
+	
+then you would need to install ninja, gcc-multilib and g++-multilib
+        
+	.. code-block:: console
+      
+             sudo apt install ninja-build
+             sudo apt install gcc-multilib g++-multilib
+
+
+
+Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
+
+    .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
+
+
+From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
+
+            .. code-block:: console
+                    
+		    cmake -G "Ninja"   -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="/home/kevinb/Documents/DEST-master/src/install"  -DCMAKE_C_COMPILER="/usr/bin/cc"  -DCMAKE_CXX_COMPILER="/usr/bin/c++"  /home/kevinb/Documents/DEST-master/src/CMakeLists.txt
+
+
+At this point you can run cmake .. to e.g. disable unnecessary solvers, then run cmake as usual to build the code (with updated path!)
+
+    .. code-block:: console
+		
+		cmake --build /home/kevinb/Documents/DEST-master/src  --clean-first  --config Debug -- "-v"
+		
+Then check the executable file
+
+    .. code-block:: console
+    
+		file DEST_analyser_Debug
+
+For testing the executable file you can run the following:
+    .. code-block:: console
+		
+		./DEST_analyser_Debug   -filename ../TESTS/B_013/B_013.dat
+
+
+ 
 
 
 
