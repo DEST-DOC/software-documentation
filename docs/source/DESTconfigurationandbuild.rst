@@ -1,5 +1,11 @@
 .. _DEST configuration and build:
 
+.. raw:: html
+
+    <style> .red {color:red} </style>
+
+.. role:: red
+
 .. DEST configuration and build
 .. ============
 
