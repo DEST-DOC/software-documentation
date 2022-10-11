@@ -471,7 +471,7 @@ Start Visual Studio and select open a local folder:
    :alt: win1
    :align: center
    :class: with-shadow
-   :scale: 90
+   :scale: 60
  
 then click on Enable and set source directory  
 
@@ -479,7 +479,7 @@ then click on Enable and set source directory
    :alt: win2
    :align: center
    :class: with-shadow
-   :scale: 90
+   :scale: 60
 
 
 
