@@ -395,7 +395,7 @@ Installing Visual Studio
    :alt: VS 
    :target: https://visualstudio.microsoft.com/free-developer-offers/
    :class: with-shadow
-   :scale: 70
+   :scale: 60
 
 First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio versions on the Visual Studio website: https://visualstudio.microsoft.com/free-developer-offers/)
 
@@ -472,7 +472,7 @@ Start Visual Studio and select open a local folder:
    :alt: win1
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 50
 
 
 then click on Enable and set source directory  
@@ -578,7 +578,7 @@ you will see the follwing (solver will start working ,,,)
    :class: with-shadow
    :scale: 50
    
-you have now built and run DEST  
+congratulations, you have now built and run DEST.  
  
 How to build and run on macOS
 =====================
