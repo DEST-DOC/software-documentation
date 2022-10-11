@@ -389,7 +389,22 @@ How to build and run on Windows
 
 Targeting the Windows Subsystem for Linux from Visual Studio
 
-Requirement:
+
+
+Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
+
+    .. code-block:: console
+		
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
+
+
+After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
+
+    .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
 
 
 How to build and run on macOS
