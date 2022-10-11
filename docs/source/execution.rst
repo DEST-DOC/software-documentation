@@ -40,7 +40,7 @@ next click on Switch between solutions and available views
 
 you will see then the following figure, select analyser.sln and then OK
 
- .. image:: ../../images/win-images/16.png
+ .. image:: ../../images/win-images/24.png
    :alt: win16
    :align: center
    :class: with-shadow
