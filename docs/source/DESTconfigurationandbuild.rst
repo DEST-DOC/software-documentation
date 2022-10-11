@@ -433,7 +433,7 @@ where the Working directory will be e.g.
 		   
 		     C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
 		   
- if everything execute as expected you will see the following
+ if everything is executed as expected you will see the following
  
                   .. code-block:: console
         
