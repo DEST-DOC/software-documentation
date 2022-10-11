@@ -389,6 +389,20 @@ How to build and run on Windows
 
 Targeting the Windows Subsystem for Linux from Visual Studio
 
+Installing Visual Studio  
+==================
+.. image:: ../../images/vs.png
+   :alt: VS 
+   :target: https://visualstudio.microsoft.com/free-developer-offers/
+   :class: with-shadow
+   :scale: 100
+
+First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio versions on the Visual Studio website: https://visualstudio.microsoft.com/free-developer-offers/)
+
+
+Once you have downloaded the installer, you can run the installer.
+
+.. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/
 
 
 Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
@@ -405,7 +419,28 @@ After the code is cloned, enter the DEST folder, make a build directory and ente
 		
 		cd DEST-master
                 cd src/BIN
+		
+From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
 
+            .. code-block:: console
+	    
+	     "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\install\x86-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe"  -DCMAKE_MAKE_PROGRAM="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src" 2>&1"
+	    
+	    
+where the Working directory will be e.g.
+
+                   .. code-block:: console
+		   
+		     C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
+		   
+ if everything execute as expected you will see the following
+ 
+                  .. code-block:: console
+        
+                   [CMake] -- Configuring done
+                   [CMake] -- Generating done
+                   [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
+ 
 
 How to build and run on macOS
 =====================
