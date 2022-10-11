@@ -391,7 +391,7 @@ Targeting the Windows Subsystem for Linux from Visual Studio
 
 Installing Visual Studio  
 ==================
-.. image:: ../../images/vs.png
+.. image:: ../../images/win-images/vs.png
    :alt: VS 
    :target: https://visualstudio.microsoft.com/free-developer-offers/
    :class: with-shadow
