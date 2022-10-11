@@ -11,7 +11,20 @@ How to build and run on Visual Studio
 
 Currently the only IDE that can generate all three executables (DEST_analyser, DEST_optimiser and DEST_conveyor) for Windows. 
 
-The "make" (as an older version of "cmake") approach to compiling and linking the code on all platforms should also work, but needs updating to ensure that is works (rather than just on Linux) on Windows and macOS. 	
+Installing Visual Studio  
+==================
+.. image:: ../../images/win-images/vs.png
+   :alt: VS 
+   :target: https://visualstudio.microsoft.com/free-developer-offers/
+   :class: with-shadow
+   :scale: 70
+
+First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio versions on the Visual Studio website: https://visualstudio.microsoft.com/free-developer-offers/)
+
+
+Once you have downloaded the installer, you can run the installer.
+
+.. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/ 	
 
 
 
