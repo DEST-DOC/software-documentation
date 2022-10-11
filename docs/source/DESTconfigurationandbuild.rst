@@ -404,6 +404,10 @@ Once you have downloaded the installer, you can run the installer.
 
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/
 
+Method one
+==================
+Using Windows command line
+
 
 Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
 
@@ -441,6 +445,24 @@ where the Working directory will be e.g.
                    [CMake] -- Generating done
                    [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
  
+ For testing the executable file you can run the following:
+    .. code-block:: console
+                 
+		 cd path to 
+		 DEST_analyser_Debug.exe   -filename ../TESTS/B_013/B_013.dat
+
+.. image:: ../../images/win-images/01.png
+   :alt: VS1 
+   :class: with-shadow
+   :scale: 100
+
+Method two
+==================
+Using Visual Studio
+
+
+
+
 
 How to build and run on macOS
 =====================
