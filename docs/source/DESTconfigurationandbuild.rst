@@ -540,7 +540,7 @@ next click on startup items and select DEST_analyser_Debug
    :class: with-shadow
    :scale: 50
 
-then right click on solution explorer and select Add debug configuration
+then right click on solution explorer (DEST_analyser) and select Add debug configuration
 
  .. image:: ../../images/win-images/11.png
    :alt: win11
@@ -548,6 +548,36 @@ then right click on solution explorer and select Add debug configuration
    :class: with-shadow
    :scale: 50
 
+this will launch vs json file, add the following line to the file and save
+     
+     .. code-block:: console
+      "arg": [" -filename ../TESTS/B_013/B_013.dat"]
+
+as shown in the following figure
+
+ .. image:: ../../images/win-images/12.png
+   :alt: win12
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+next right click on solution explorer (DEST_analyser) and select Debug 
+
+ .. image:: ../../images/win-images/13.png
+   :alt: win13
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+you will see the follwing, solver will start working
+
+ .. image:: ../../images/win-images/14.png
+   :alt: win14
+   :align: center
+   :class: with-shadow
+   :scale: 50
+   
+you have now built and run DEST  
  
 How to build and run on macOS
 =====================
