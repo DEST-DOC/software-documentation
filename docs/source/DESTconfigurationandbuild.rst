@@ -1,14 +1,5 @@
 .. _DEST configuration and build:
 
-.. raw:: html
-
-    <style>
-        .red {color:red; font-weight:bold;}
-        .b {color:#0000FF; background-color:white;}
-    </style>
-
-.. role:: red
-.. role:: b
 
 .. DEST configuration and build
 .. ============
@@ -418,7 +409,7 @@ Once you have downloaded the installer, you can run the installer.
 
 Method one
 ==================
- :red: Using Windows command line
+Using Windows command line
 
 
 Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
@@ -475,7 +466,7 @@ as shown in the following figure
 
 Method two
 ==================
-:red: Using Visual Studio
+Using Visual Studio
 
 Start Visual Studio and select open a local folder:	
   
