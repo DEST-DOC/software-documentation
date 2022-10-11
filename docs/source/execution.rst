@@ -27,7 +27,7 @@ Once you have downloaded the installer, you can run the installer.
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/ 	
 
 
-next click on Switch between solutions and available views
+start Visual Studio and click on Switch between solutions and available views
 
 
  .. image:: ../../images/win-images/8x.png
