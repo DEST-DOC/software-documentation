@@ -2,9 +2,13 @@
 
 .. raw:: html
 
-    <style> .red {color:red} </style>
+    <style>
+        .red {color:red; font-weight:bold;}
+        .b {color:#0000FF; background-color:white;}
+    </style>
 
 .. role:: red
+.. role:: b
 
 .. DEST configuration and build
 .. ============
@@ -410,11 +414,11 @@ Once you have downloaded the installer, you can run the installer.
 
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/
 
-.. role:: red
+
 
 Method one
 ==================
-:red: Using Windows command line
+ :red: Using Windows command line
 
 
 Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
