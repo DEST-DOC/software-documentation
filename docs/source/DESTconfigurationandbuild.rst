@@ -404,9 +404,11 @@ Once you have downloaded the installer, you can run the installer.
 
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/
 
+.. role:: red
+
 Method one
 ==================
-Using Windows command line
+:red: Using Windows command line
 
 
 Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
@@ -463,7 +465,7 @@ as shown in the following figure
 
 Method two
 ==================
-Using Visual Studio
+:red: Using Visual Studio
 
 Start Visual Studio and select open a local folder:	
   
