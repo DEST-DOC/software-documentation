@@ -436,8 +436,9 @@ where the Working directory will be e.g.
                    .. code-block:: console
 		   
 		     C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
-		   
- if everything is executed as expected you will see the following
+
+
+if everything is executed as expected you will see the following
  
                   .. code-block:: console
         
@@ -445,16 +446,19 @@ where the Working directory will be e.g.
                    [CMake] -- Generating done
                    [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
  
- For testing the executable file you can run the following:
+For testing the executable file you can run the following:
     .. code-block:: console
                  
-		 cd path to 
+		 cd path to DEST_analyser_Debug.exe (e.g. src/BIN/DEST_analyser_Debug.exe)
 		 DEST_analyser_Debug.exe   -filename ../TESTS/B_013/B_013.dat
 
-.. image:: ../../images/win-images/01.png
+as shown in the following figure
+
+ .. image:: ../../images/win-images/01.png
    :alt: VS1 
    :class: with-shadow
    :scale: 100
+
 
 Method two
 ==================
