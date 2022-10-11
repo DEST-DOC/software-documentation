@@ -468,7 +468,7 @@ Method two
 ==================
 Using Visual Studio
 
-Start Visual Studio and select open a local folder:	
+Start Visual Studio and select open a local folder and navigate to the root directory of your project (e.g. DEST-master):	
   
  
  .. image:: ../../images/win-images/1.png
