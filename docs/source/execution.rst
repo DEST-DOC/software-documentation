@@ -30,8 +30,8 @@ Once you have downloaded the installer, you can run the installer.
 next click on Switch between solutions and available views
 
 
- .. image:: ../../images/win-images/8.png
-   :alt: win8
+ .. image:: ../../images/win-images/8x.png
+   :alt: win8x
    :align: center
    :class: with-shadow
    :scale: 50
@@ -40,7 +40,7 @@ next click on Switch between solutions and available views
 
 you will see then the following figure, select analyser.sln and then OK
 
- .. image:: ../../images/win-images/24.png
+ .. image:: ../../images/win-images/16.png
    :alt: win16
    :align: center
    :class: with-shadow
