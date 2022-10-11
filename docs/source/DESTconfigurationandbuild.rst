@@ -395,7 +395,7 @@ Installing Visual Studio
    :alt: VS 
    :target: https://visualstudio.microsoft.com/free-developer-offers/
    :class: with-shadow
-   :scale: 100
+   :scale: 70
 
 First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio versions on the Visual Studio website: https://visualstudio.microsoft.com/free-developer-offers/)
 
@@ -457,7 +457,7 @@ as shown in the following figure
  .. image:: ../../images/win-images/01.png
    :alt: VS1 
    :class: with-shadow
-   :scale: 100
+   :scale: 70
 
 
 Method two
