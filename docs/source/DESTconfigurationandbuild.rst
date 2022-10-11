@@ -388,7 +388,6 @@ DEST on Local Machine
 How to build and run on Windows
 =====================
 
-Targeting the Windows Subsystem for Linux from Visual Studio
 
 Installing Visual Studio  
 ==================
