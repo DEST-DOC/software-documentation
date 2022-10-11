@@ -472,7 +472,7 @@ Start Visual Studio and select open a local folder:
    :alt: win1
    :align: center
    :class: with-shadow
-   :scale: 50
+   :scale: 60
 
 
 then click on Enable and set source directory  
@@ -551,7 +551,8 @@ then right click on solution explorer (DEST_analyser) and select Add debug confi
 this will launch vs json file, add the following line to the file and save
      
      .. code-block:: console
-      "arg": [" -filename ../TESTS/B_013/B_013.dat"]
+     
+       "arg": [" -filename ../TESTS/B_013/B_013.dat"]
 
 as shown in the following figure
 
@@ -569,7 +570,7 @@ next right click on solution explorer (DEST_analyser) and select Debug
    :class: with-shadow
    :scale: 50
 
-you will see the follwing, solver will start working
+you will see the follwing (solver will start working ,,,)
 
  .. image:: ../../images/win-images/14.png
    :alt: win14
