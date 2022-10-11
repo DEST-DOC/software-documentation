@@ -62,7 +62,7 @@ After everything done you will see the following
    :class: with-shadow
    :scale: 50
 
-next right click on solution explorer and select 
+next right click on solution explorer and select properties
 
  .. image:: ../../images/win-images/19.png
    :alt: win19
@@ -86,7 +86,7 @@ now you can run the solver
    :class: with-shadow
    :scale: 50
 
-How to build and run on Visual Studio Code properties
+How to build and run on Visual Studio Code 
 =====================
 
 
