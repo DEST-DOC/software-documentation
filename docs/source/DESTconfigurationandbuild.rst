@@ -464,6 +464,22 @@ Method two
 ==================
 Using Visual Studio
 
+Start Visual Studio and select open a local folder:	
+  
+ 
+ .. image:: ../../images/win-images/1.png
+   :alt: win1
+   :align: center
+   :class: with-shadow
+   :scale: 90
+ 
+then click on Enable and set source directory  
+
+ .. image:: ../../images/win-images/2.png
+   :alt: win2
+   :align: center
+   :class: with-shadow
+   :scale: 90
 
 
 
