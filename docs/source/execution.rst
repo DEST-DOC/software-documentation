@@ -17,7 +17,7 @@ Installing Visual Studio
    :alt: VS 
    :target: https://visualstudio.microsoft.com/free-developer-offers/
    :class: with-shadow
-   :scale: 70
+   :scale: 60
 
 First, you should download and install your favorite desktop IDE packages (links to the various Visual Studio versions on the Visual Studio website: https://visualstudio.microsoft.com/free-developer-offers/)
 
@@ -27,9 +27,66 @@ Once you have downloaded the installer, you can run the installer.
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/ 	
 
 
+next click on Switch between solutions and available views
 
 
-How to build and run on Visual Studio Code 
+ .. image:: ../../images/win-images/8.png
+   :alt: win8
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+.. Note:: Assuming you have followed the steps in https://dest-doc.readthedocs.io/en/latest/DESTconfigurationandbuild.html#how-to-build-and-run-on-windows
+
+you will see then the following figure, select analyser.sln and then OK
+
+ .. image:: ../../images/win-images/16.png
+   :alt: win16
+   :align: center
+   :class: with-shadow
+   :scale: 50
+  
+then right click on solution explorer and select Rebuild solution  
+  
+ .. image:: ../../images/win-images/17.png
+   :alt: win17
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+After everything done you will see the following
+
+ .. image:: ../../images/win-images/18.png
+   :alt: win18
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+next right click on solution explorer and select 
+
+ .. image:: ../../images/win-images/19.png
+   :alt: win19
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+then enter the arguments for DEST (e.g. -filename   /home/kevinb/Videos/DEST-master/src/TESTS/B_013/B_013.dat) [apply and close]
+
+ .. image:: ../../images/win-images/21.png
+   :alt: win21
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+now you can run the solver
+
+ .. image:: ../../images/win-images/22.png
+   :alt: win22
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+How to build and run on Visual Studio Code properties
 =====================
 
 
