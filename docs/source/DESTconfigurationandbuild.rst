@@ -456,6 +456,7 @@ as shown in the following figure
 
  .. image:: ../../images/win-images/01.png
    :alt: VS1 
+   :align: center
    :class: with-shadow
    :scale: 70
 
@@ -471,19 +472,45 @@ Start Visual Studio and select open a local folder:
    :alt: win1
    :align: center
    :class: with-shadow
-   :scale: 60
- 
+   :scale: 50
+
+
 then click on Enable and set source directory  
 
  .. image:: ../../images/win-images/2.png
    :alt: win2
    :align: center
    :class: with-shadow
-   :scale: 60
+   :scale: 50
+
+next select CMakeLists.txt (it can be found in DEST root directory)
+
+ .. image:: ../../images/win-images/3.png
+   :alt: win3
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+After Visual Studio compiling and Building done click on Manage configuration
+
+ .. image:: ../../images/win-images/4.png
+   :alt: win4
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+then click on x86-Debug
+
+ .. image:: ../../images/win-images/5.png
+   :alt: win5
+   :align: center
+   :class: with-shadow
+   :scale: 50
 
 
 
-
+   
+   
 How to build and run on macOS
 =====================
 
