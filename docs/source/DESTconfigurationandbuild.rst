@@ -491,7 +491,7 @@ next select CMakeLists.txt (it can be found in DEST root directory)
    :class: with-shadow
    :scale: 50
 
-After Visual Studio compiling and Building done click on Manage configuration
+After Visual Studio automatic compiling and Building done click on Manage configuration
 
  .. image:: ../../images/win-images/4.png
    :alt: win4
@@ -507,10 +507,48 @@ then click on x86-Debug
    :class: with-shadow
    :scale: 50
 
+after saving Visual Studio automatic compiling and Building will be executed again
+
+ .. image:: ../../images/win-images/7.png
+   :alt: win7
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+next click on Switch between solutions and available views
 
 
+ .. image:: ../../images/win-images/8.png
+   :alt: win8
+   :align: center
+   :class: with-shadow
+   :scale: 50
    
-   
+and then click on Cmake target view
+
+ .. image:: ../../images/win-images/9.png
+   :alt: win9
+   :align: center
+   :class: with-shadow
+   :scale: 50
+ 
+next click on startup items and select DEST_analyser_Debug
+
+ .. image:: ../../images/win-images/10.png
+   :alt: win10
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+then right click on solution explorer and select Add debug configuration
+
+ .. image:: ../../images/win-images/11.png
+   :alt: win11
+   :align: center
+   :class: with-shadow
+   :scale: 50
+
+ 
 How to build and run on macOS
 =====================
 
