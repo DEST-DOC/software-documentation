@@ -404,69 +404,6 @@ Once you have downloaded the installer, you can run the installer.
 
 .. Note:: For more detailed approach visit https://visualstudio.microsoft.com/free-developer-offers/
 
-
-
-Method one
-==================
-Using Windows command line
-
-
-Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
-
-    .. code-block:: console
-		
-		cd /data/yours
-                git clone https://gitlab.DEST_master 
-
-
-After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
-
-    .. code-block:: console
-		
-		cd DEST-master
-                cd src/BIN
-		
-From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
-
-            .. code-block:: console
-	    
-	     "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\install\x86-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe"  -DCMAKE_MAKE_PROGRAM="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src" 2>&1"
-	    
-	    
-where the Working directory will be e.g.
-
-                   .. code-block:: console
-		   
-		     C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
-
-
-if everything is executed as expected you will see the following
- 
-                  .. code-block:: console
-        
-                   [CMake] -- Configuring done
-                   [CMake] -- Generating done
-                   [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
- 
-For testing the executable file you can run the following:
-    .. code-block:: console
-                 
-		 cd path to DEST_analyser_Debug.exe (e.g. src/BIN/DEST_analyser_Debug.exe)
-		 DEST_analyser_Debug.exe   -filename ../TESTS/B_013/B_013.dat
-
-as shown in the following figure
-
- .. image:: ../../images/win-images/01.png
-   :alt: VS1 
-   :align: center
-   :class: with-shadow
-   :scale: 70
-
-
-Method two
-==================
-Using Visual Studio
-
 Start Visual Studio and select open a local folder and navigate to the root directory of your project (e.g. DEST-master):	
   
  
@@ -579,8 +516,68 @@ you will see the follwing (solver will start working ,,,)
    :align: center
    :class: with-shadow
    :scale: 50
-   
-congratulations, you have now built and run DEST.  
+    
+
+Using Windows command line the steps above are explained in the following
+  
+  .. code-block:: console
+
+
+        Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
+
+             .. code-block:: console
+		
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
+
+
+        After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
+
+             .. code-block:: console
+		
+		cd DEST-master
+                cd src/BIN
+		
+        From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
+
+            .. code-block:: console
+	    
+	       "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\install\x86-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe"  -DCMAKE_MAKE_PROGRAM="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src" 2>&1"
+	    
+	    
+        where the Working directory will be e.g.
+
+                   .. code-block:: console
+		   
+		       C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
+
+
+       if everything is executed as expected you will see the following
+ 
+                  .. code-block:: console
+        
+                      [CMake] -- Configuring done
+                      [CMake] -- Generating done
+                      [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
+ 
+ 
+ 
+ 
+For testing the executable file you can run the following:
+    .. code-block:: console
+                 
+		 cd path to DEST_analyser_Debug.exe (e.g. src/BIN/DEST_analyser_Debug.exe)
+		 DEST_analyser_Debug.exe   -filename ../TESTS/B_013/B_013.dat
+
+as shown in the following figure
+
+ .. image:: ../../images/win-images/01.png
+   :alt: VS1 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+
+congratulations, you have now built and run DEST using Windows command line and Visual Studio. 
  
 How to build and run on macOS
 =====================
