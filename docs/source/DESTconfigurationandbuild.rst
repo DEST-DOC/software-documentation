@@ -523,18 +523,9 @@ Using Windows command line the steps above are explained in the following
   .. code-block:: console
 
 
-        Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
+        Enter the work directory (cloned DEST code into a folder, e.g. DEST-master)
 		
-		cd /data/yours
-                git clone https://gitlab.DEST_master 
-
-
-        After the code is cloned, enter the DEST folder, make a build directory and enter it (cd ../BIN)
-		
-		cd DEST-master
-                cd src/BIN
-		
-        From within the build directory(BIN), run the configure command (with updated path!). Note the use of CC and CXX to select the special compilers.
+        From within the build directory, run the configure command. Note the use of CC and CXX to select the special compilers.
 	    
 	       "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\install\x86-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe"  -DCMAKE_MAKE_PROGRAM="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src" 2>&1"
 	    
@@ -550,7 +541,7 @@ Using Windows command line the steps above are explained in the following
                       [CMake] -- Generating done
                       [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
 		      
-       [To build the code, linking executable]
+       [To build the code, linking the executable!]
        
        Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe 
        Build flags: /DWIN32;/D_WINDOWS;/W3
