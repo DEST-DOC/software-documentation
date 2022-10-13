@@ -550,13 +550,13 @@ Using Windows command line the steps above are explained in the following
                       [CMake] -- Generating done
                       [CMake] -- Build files have been written to: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug
 		      
-       [To build the code]
-       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+       [To build the code, linking executable]
+       
        Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe 
        Build flags: /DWIN32;/D_WINDOWS;/W3
+       
        The C compiler identification is MSVC, found in "C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug/CMakeFiles   /3.22.22040401-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
 
-       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
        Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe 
        Build flags: /DWIN32;/D_WINDOWS;/W3;/GR;/EHsc
 
@@ -580,7 +580,10 @@ Using Windows command line the steps above are explained in the following
 
         [2/2] Linking CXX executable cmTC_2bd60.exe
  
+ 
 For testing the executable file you can run the following (using Windows command line):
+.. Note:: You can close Visual Studio IDE and continue with Windows command line
+  
     .. code-block:: console
                  
 		 cd path to DEST_analyser_Debug.exe (e.g. src/BIN/DEST_analyser_Debug.exe)
