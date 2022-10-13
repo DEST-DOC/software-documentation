@@ -582,6 +582,7 @@ Using Windows command line the steps above are explained in the following
  
  
 For testing the executable file you can run the following (using Windows command line):
+
 .. Note:: You can close Visual Studio IDE and continue with Windows command line
   
     .. code-block:: console
