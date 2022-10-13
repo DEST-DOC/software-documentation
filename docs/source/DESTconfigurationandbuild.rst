@@ -569,16 +569,16 @@ Using Windows command line the steps above are explained in the following
        Detecting C compiler ABI info compiled with the following output:
        Change Dir: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug/CMakeFiles/CMakeTmp
 
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c4efc && [1/2] Building C object CMakeFiles\cmTC_c4efc.dir\CMakeCCompilerABI.c.obj
-        [2/2] Linking C executable cmTC_c4efc.exe
+              Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c4efc && [1/2] Building C object CMakeFiles\cmTC_c4efc.dir\CMakeCCompilerABI.c.obj
+	      
+              [2/2] Linking C executable cmTC_c4efc.exe
 
         Detecting CXX compiler ABI info compiled with the following output:
         Change Dir: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug/CMakeFiles/CMakeTmp
 
-         Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2bd60 && [1/2] Building CXX object CMakeFiles\cmTC_2bd60.dir\CMakeCXXCompilerABI.cpp.obj
-
-
-        [2/2] Linking CXX executable cmTC_2bd60.exe
+              Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2bd60 && [1/2] Building CXX object CMakeFiles\cmTC_2bd60.dir\CMakeCXXCompilerABI.cpp.obj
+	      
+              [2/2] Linking CXX executable cmTC_2bd60.exe
  
  
 For testing the executable file you can run the following (using Windows command line):
