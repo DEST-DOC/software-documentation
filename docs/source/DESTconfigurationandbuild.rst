@@ -523,14 +523,14 @@ Using Windows command line the steps above are explained in the following
   .. code-block:: console
 
 
-        Enter the work directory (cloned DEST code into a folder, e.g. DEST-master)
+       Enter the work directory (cloned DEST code into a folder, e.g. DEST-master)
 		
-        From within the build directory, run the configure command. Note the use of CC and CXX to select the special compilers.
+       From within the build directory, run the configure command. Note the use of CC and CXX to select the special compilers.
 	    
 	       "C:\WINDOWS\system32\cmd.exe" /c "%SYSTEMROOT%\System32\chcp.com 65001 >NUL && "C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja"  -DCMAKE_BUILD_TYPE:STRING="Debug" -DCMAKE_INSTALL_PREFIX:PATH="C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\install\x86-Debug" -DCMAKE_C_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe" -DCMAKE_CXX_COMPILER:FILEPATH="C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.32.31326/bin/Hostx86/x86/cl.exe"  -DCMAKE_MAKE_PROGRAM="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src" 2>&1"
 	    
 	    
-        where the Working directory will be e.g.
+       where the Working directory will be e.g.
 		   
 		       C:\Users\Administrator\Desktop\From_ubuntu\DEST-master\src\out\build\x86-Debug
 
@@ -564,8 +564,8 @@ Using Windows command line the steps above are explained in the following
 	      
               [2/2] Linking C executable cmTC_c4efc.exe
 
-        Detecting CXX compiler ABI info compiled with the following output:
-        Change Dir: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug/CMakeFiles/CMakeTmp
+              Detecting CXX compiler ABI info compiled with the following output:
+              Change Dir: C:/Users/Administrator/Desktop/From_ubuntu/DEST-master/src/out/build/x86-Debug/CMakeFiles/CMakeTmp
 
               Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2bd60 && [1/2] Building CXX object CMakeFiles\cmTC_2bd60.dir\CMakeCXXCompilerABI.cpp.obj
 	      
