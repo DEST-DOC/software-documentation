@@ -8,7 +8,7 @@ The following  document briefly details how user/developers  of DEST can  packag
 
 Docker
 =============
-
+The platform of Docker is used as a service products that provides some degree of flexibility for developers to build, share, and run modern applicationsuse in packages called containers. In the following we will provide an example on how to configure and build DEST on a container, and later being able to run it inside Docker container.
 
 Installing Docker
 ==================
