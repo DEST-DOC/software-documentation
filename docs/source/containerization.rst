@@ -30,7 +30,24 @@ Enter your work directory and clone the DEST code into a folder, e.g. DEST-maste
                 git clone https://gitlab.DEST_master 
     
     
+In the root folder of DEST you can find a file with the name Dockerfile which will be used by docker build command to build Docker images from a Dockerfile and a “context”.
 
+open a terminal at the root folder of DEST and run the following to remove all unused containers, networks, images
+     .. code-block:: console
+
+           docker image prune -a 
+
+then check it with the following
+
+     .. code-block:: console
+           
+	   docker image ls
+          
+now run the build command
+
+     .. code-block:: console
+           
+	   docker build .
 
 
 
