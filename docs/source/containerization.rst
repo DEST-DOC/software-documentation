@@ -85,7 +85,7 @@ next you can run for example the following to tag the image
 
      .. code-block:: console
            
-	   docker tag 59cbf819bc19  dest/dest_oxford_32_run:latest
+	   docker tag a1b004da18e5  dest/dest_oxford_32_run:latest
 	   
 	   
  .. image:: ../../images/d5.png
@@ -93,6 +93,13 @@ next you can run for example the following to tag the image
    :align: center
    :class: with-shadow
    :scale: 70
+
+finally, to test DEST simply run the following
+
+  .. code-block:: console
+
+            docker run --rm dest/dest_oxford_32_run:latest  ./BIN/DEST_analyser_Debug  -filename  TESTS/B_013/B_013.dat
+
 
 Singularity 
 ==============
