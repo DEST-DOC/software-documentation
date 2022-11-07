@@ -12,9 +12,9 @@ The platform of Docker is used as a service products that provides some degree o
 
 Installing Docker
 ==================
-.. image:: ../../images/ac.png
-   :alt: Miniconda
-   :target: https://docs.conda.io/en/latest/miniconda.html
+.. image:: ../../images/doc.png
+   :alt: Docker
+   :target: https://www.docker.com/
    :class: with-shadow
    :scale: 30
 
