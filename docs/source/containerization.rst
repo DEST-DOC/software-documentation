@@ -69,6 +69,9 @@ now you can run the build command
    :align: center
    :class: with-shadow
    :scale: 70	
+   
+.. Note:: For more detailed approach visit https://docs.docker.com/engine/reference/commandline/build/.
+
 
 after build was processed successfully you will see the following information about the docker image
 
@@ -82,7 +85,7 @@ next you can run for example the following to tag the image
 
      .. code-block:: console
            
-	   docker tag 59cbf819bc19  kbronik/dest_oxford_32_run:latest
+	   docker tag 59cbf819bc19  dest/dest_oxford_32_run:latest
 	   
 	   
  .. image:: ../../images/d5.png
@@ -93,17 +96,20 @@ next you can run for example the following to tag the image
 
 Singularity 
 ==============
+Singularity is a free computer program. Singularity brings containers and reproducibility to scientific computing and the high-performance computing, Similar to the platform of Docker, it is used as a service products that provides some degree of flexibility for developers to build, share, and run modern applicationsuse in packages called containers. In the following we will provide an example on how to configure,build and run DEST on a Singularity container. 
+
 Installing Singularity
 ==================
-.. image:: ../../images/ac.png
-   :alt: Miniconda
-   :target: https://docs.conda.io/en/latest/miniconda.html
+
+.. image:: ../../images/sing1.png
+   :alt: Singu
+   :target: https://docs.sylabs.io/guides/3.5/user-guide/introduction.html
    :class: with-shadow
    :scale: 30
 
-First, you should download Miniconda (links to the various miniconda versions on the Miniconda website: https://docs.conda.io/en/latest/miniconda.html)
+First, you should install Singularity on your system (links to guide for running Singularity on a computer on the Singularity website: https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 
-.. Note:: If you wish to use Python on the Archer2's compute nodes then you must install Miniconda in your /work directories as these are the only ones visible on the compute nodes.
+
 
 
 Once you have downloaded the installer, you can run it. 
