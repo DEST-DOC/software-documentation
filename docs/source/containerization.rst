@@ -150,5 +150,9 @@ After building  successfully Docker image you can use it (or use the following i
            
 	   singularity build singularity_dest.sif docker://kbronik/dest_oxford_32_run:latest
 
-
+  .. image:: ../../images/sing2.png
+   :alt: Singu2
+   :align: center
+   :class: with-shadow
+   :scale: 70 
 
