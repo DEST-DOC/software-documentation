@@ -16,7 +16,7 @@ Installing Docker
    :alt: Docker
    :target: https://www.docker.com/
    :class: with-shadow
-   :scale: 30
+   :scale: 50
 
 First, you should download Docker (links to the various Docker versions on the Docker website: https://www.docker.com and https://docs.docker.com)
 
@@ -140,7 +140,7 @@ Installing Singularity
    :alt: Singu
    :target: https://docs.sylabs.io/guides/3.5/user-guide/introduction.html
    :class: with-shadow
-   :scale: 30
+   :scale: 50
 
 First, you should install Singularity on your system (links to a online guidance for running Singularity on a computer, Singularity website: https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 
