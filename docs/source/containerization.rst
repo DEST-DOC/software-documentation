@@ -107,14 +107,16 @@ Installing Singularity
    :class: with-shadow
    :scale: 30
 
-First, you should install Singularity on your system (links to guide for running Singularity on a computer on the Singularity website: https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
+First, you should install Singularity on your system (links to a online guidance for running Singularity on a computer, Singularity website: https://docs.sylabs.io/guides/3.5/user-guide/quick_start.html)
 
 
 
+Once you have installed it on your system, you can follow the following instructions. 
+After building  successfully Docker image you can use it (or use the following image) to build Singularity image
 
-Once you have downloaded the installer, you can run it. 
-For example:
+     .. code-block:: console
+           
+	   singularity build singularity_dest.sif docker://kbronik/dest_oxford_32_run:latest
 
-    .. code-block:: console
-		
-		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
+
+
