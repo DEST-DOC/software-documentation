@@ -36,20 +36,39 @@ open a terminal at the root folder of DEST and run the following to remove all u
      .. code-block:: console
 
            docker image prune -a 
+	   
+as shown in the following figure
 
-then check it with the following
+ .. image:: ../../images/d1.png
+   :alt: DO1 
+   :align: center
+   :class: with-shadow
+   :scale: 70	   
+
+then check it with the following command
 
      .. code-block:: console
            
 	   docker image ls
+	   
+ .. image:: ../../images/d2.png
+   :alt: DO2 
+   :align: center
+   :class: with-shadow
+   :scale: 70		   
+	   
           
-now run the build command
+now you can run the build command
 
      .. code-block:: console
            
 	   docker build .
 
-
+ .. image:: ../../images/d3.png
+   :alt: DO3 
+   :align: center
+   :class: with-shadow
+   :scale: 70	
 
 Singularity 
 ==============
