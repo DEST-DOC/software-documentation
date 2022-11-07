@@ -108,10 +108,13 @@ finally, for testing the executable file you can run the following
 
 In order to copy the results from the container to the host, first create a folder on host machine (e.g. results-container-to-host) you can use the following command (with updated path!)
 
-  .. code-block:: console
-      docker run -it dest/dest_oxford_32_run:latest  /bin/bash
-      scp  TESTS/B_013/*   kevinb@kevin-XPS:/home/kevinb/Desktop/results-container-to-host
-      
+    .. code-block:: console
+    
+         docker run -it dest/dest_oxford_32_run:latest  /bin/bash
+	 
+         scp  TESTS/B_013/*   kevinb@kevin-XPS:/home/kevinb/Desktop/results-container-to-host
+   
+   
  .. image:: ../../images/d7.png
    :alt: DO7 
    :align: center
@@ -156,3 +159,26 @@ After building  successfully Docker image you can use it (or use the following i
    :class: with-shadow
    :scale: 70 
 
+
+after build was processed successfully you will see the following information about the singularity image
+
+ .. image:: ../../images/sing3.png
+   :alt: Singu3 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+   
+finally, for testing the executable file you can run the following (where /home/kevinb/Desktop/testing/B_013.dat is an existing folder on your local system or cluster/HPC system) 
+
+  .. code-block:: console
+
+            singularity exec  singularity_dest.sif  /home/executiveuser/BIN/DEST_analyser_Debug  -filename  /home/kevinb/Desktop/testing/B_013.dat
+
+ .. image:: ../../images/sing4.png
+   :alt: Singu4 
+   :align: center
+   :class: with-shadow
+   :scale: 70   
+   
+
+congratulations, you have now built and run DEST using Docker and Singularity.   
