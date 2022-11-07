@@ -70,6 +70,27 @@ now you can run the build command
    :class: with-shadow
    :scale: 70	
 
+after build was processed successfully you will see the following information about the docker image
+
+ .. image:: ../../images/d4.png
+   :alt: DO4 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+
+next you can run for example the following to tag the image
+
+     .. code-block:: console
+           
+	   docker tag 59cbf819bc19  kbronik/dest_oxford_32_run:latest
+	   
+	   
+ .. image:: ../../images/d5.png
+   :alt: DO5 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+
 Singularity 
 ==============
 Installing Singularity
