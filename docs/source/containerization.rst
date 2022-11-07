@@ -45,7 +45,7 @@ as shown in the following figure
    :class: with-shadow
    :scale: 70	   
 
-then check it with the following command
+then check it with the following command 
 
      .. code-block:: console
            
@@ -94,12 +94,37 @@ next you can run for example the following to tag the image
    :class: with-shadow
    :scale: 70
 
-finally, to test DEST simply run the following
+finally, for testing the executable file you can run the following
 
   .. code-block:: console
 
             docker run --rm dest/dest_oxford_32_run:latest  ./BIN/DEST_analyser_Debug  -filename  TESTS/B_013/B_013.dat
 
+ .. image:: ../../images/d6.png
+   :alt: DO6 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+
+In order to copy the results from the container to the host, first create a folder on host machine (e.g. results-container-to-host) you can use the following command (with updated path!)
+
+  .. code-block:: console
+      docker run -it dest/dest_oxford_32_run:latest  /bin/bash
+      scp  TESTS/B_013/*   kevinb@kevin-XPS:/home/kevinb/Desktop/results-container-to-host
+      
+ .. image:: ../../images/d7.png
+   :alt: DO7 
+   :align: center
+   :class: with-shadow
+   :scale: 70
+   
+  .. image:: ../../images/d8.png
+   :alt: DO8 
+   :align: center
+   :class: with-shadow
+   :scale: 70  
+
+congratulations, you have now built and run DEST using Docker.
 
 Singularity 
 ==============
