@@ -22,13 +22,17 @@ First, you should download Docker (links to the various Docker versions on the D
 
 Once you have downloaded and installed it on your system, you can follow the following instructions. 
 
-For example:
+Enter your work directory and clone the DEST code into a folder, e.g. DEST-master
 
     .. code-block:: console
 		
-		user@login*:~> bash Miniconda3-latest-Linux-x86_64.sh
+		cd /data/yours
+                git clone https://gitlab.DEST_master 
     
     
+
+
+
 
 Singularity 
 ==============
