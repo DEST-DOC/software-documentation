@@ -133,7 +133,7 @@ congratulations, you have now built and run DEST using Docker.
 
 Singularity 
 ==============
-Singularity is a free computer program. Singularity brings containers and reproducibility to scientific computing and the high-performance computing, Similar to the platform of Docker, it is used as a service products that provides some degree of flexibility for developers to build, share, and run modern applicationsuse in packages called containers. In the following we will provide an example on how to configure,build and run DEST on a Singularity container. 
+Singularity is a free computer program. Singularity brings containers and reproducibility to scientific computing and the high-performance computing. Similar to the platform of Docker, it is used as a service products that provides some degree of flexibility for developers to build, share, and run modern applicationsuse in packages called containers. In the following we will provide an example on how to configure,build and run DEST on a Singularity container. 
 
 Installing Singularity
 ==================
