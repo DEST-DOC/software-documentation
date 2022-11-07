@@ -115,12 +115,13 @@ In order to copy the results from the container to the host, first create a fold
          scp  TESTS/B_013/*   kevinb@kevin-XPS:/home/kevinb/Desktop/results-container-to-host
    
    
- .. image:: ../../images/d7.png
+  .. image:: ../../images/d7.png
    :alt: DO7 
    :align: center
    :class: with-shadow
    :scale: 70
-   
+ 
+ 
   .. image:: ../../images/d8.png
    :alt: DO8 
    :align: center
