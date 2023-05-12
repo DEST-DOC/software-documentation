@@ -31,7 +31,7 @@ OPTIMISER - A simple optimisation package designed to run simultaneously many DE
 
 CONVEYOR - GUI and "integration platform", designed to work closely with DEST_analysers and DEST_optimiser, but also to help with various interfacing and automation tasks. 
 
- 
+DARCoMS - The Dynamic Adaptive Recursive Concurrent Multiscale Supermodule that calls upon DEST capability to run multiscale problems. Current implementation focuses on the Multi Timestep Integration (Subcycling) of subdomains
 
 The above is a "bottom-up" description, in terms of dependencies, but the interdependencies are sometimes a bit more complex than the above list suggests, though every effort should be made to keep the interdependencies as simple as possible. 
 
