@@ -22,7 +22,7 @@ DARCOMS Input file
    :alt: darc1
    :align: center
    :class: with-shadow
-   :scale: 80  
+   :scale: 50  
    
 ...................
 
@@ -31,7 +31,7 @@ DARCOMS Input file
    :alt: darc2
    :align: center
    :class: with-shadow
-   :scale: 80  
+   :scale: 50  
    
 ...................     
 
@@ -39,7 +39,7 @@ DARCOMS Input file
    :alt: darc3
    :align: center
    :class: with-shadow
-   :scale: 80  
+   :scale: 50  
    
 ...................
 
@@ -48,7 +48,7 @@ DARCOMS Input file
    :alt: darc4
    :align: center
    :class: with-shadow
-   :scale: 80 
+   :scale: 50 
    
 ...................     
 
@@ -56,7 +56,7 @@ DARCOMS Input file
    :alt: darc5
    :align: center
    :class: with-shadow
-   :scale: 80  
+   :scale: 50  
    
 ...................
 
@@ -65,7 +65,7 @@ DARCOMS Input file
    :alt: darc6
    :align: center
    :class: with-shadow
-   :scale: 80 
+   :scale: 50 
    
 
 DARCoMS Development
@@ -77,7 +77,7 @@ Visual explanation of the concept
 .. image:: ../../images/darcoms7.jpg
    :alt: darc7
    :class: with-shadow
-   :scale: 80
+   :scale: 50
    
 
 DARCoMS Benchmarks
@@ -87,7 +87,7 @@ DARCoMS Benchmarks
    :alt: darc8
    :align: center
    :class: with-shadow
-   :scale: 80
+   :scale: 50
  
 
  
