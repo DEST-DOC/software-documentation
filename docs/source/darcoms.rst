@@ -18,8 +18,8 @@ Introduction
 DARCOMS Input file
 ==============
 
-.. image:: ../../images/Slide15x.jpg
-   :alt: inp15
+.. image:: ../../images/darcoms1.jpg
+   :alt: darc1
    :align: center
    :class: with-shadow
    :scale: 80  
@@ -27,41 +27,67 @@ DARCOMS Input file
 ...................
 
 
-.. image:: ../../images/Slide16x.jpg
-   :alt: inp16
+.. image:: ../../images/darcoms2.jpg
+   :alt: darc2
    :align: center
    :class: with-shadow
-   :scale: 80     
+   :scale: 80  
+   
+...................     
 
+.. image:: ../../images/darcoms3.jpg
+   :alt: darc3
+   :align: center
+   :class: with-shadow
+   :scale: 80  
+   
+...................
+
+
+.. image:: ../../images/darcoms4.jpg
+   :alt: darc4
+   :align: center
+   :class: with-shadow
+   :scale: 80 
+   
+...................     
+
+.. image:: ../../images/darcoms5.jpg
+   :alt: darc5
+   :align: center
+   :class: with-shadow
+   :scale: 80  
+   
+...................
+
+
+.. image:: ../../images/darcoms6.jpg
+   :alt: darc6
+   :align: center
+   :class: with-shadow
+   :scale: 80 
    
 
-DARCoMS Workflow
+DARCoMS Development
 ==============
 
 Visual explanation of the concept
 ---------------------------------
 
-.. image:: ../../images/DEST_data_flow.jpg
-   :alt: modelinputs
+.. image:: ../../images/darcoms7.jpg
+   :alt: darc7
    :class: with-shadow
-   :scale: 100
+   :scale: 80
    
 
-DEST flowchart
+DARCoMS Benchmarks
 ==============
 
-.. image:: ../../images/Slide1.jpg
-   :alt: flowchar1
+.. image:: ../../images/darcoms8.jpg
+   :alt: darc8
    :align: center
    :class: with-shadow
-   :scale: 50
+   :scale: 80
  
-...................
 
-
-.. image:: ../../images/Slide2.jpg
-   :alt: flowchar2
-   :align: center
-   :class: with-shadow
-   :scale: 50
  
