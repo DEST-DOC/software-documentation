@@ -74,7 +74,7 @@ DARCoMS Development
 Visual explanation of the concept
 ---------------------------------
 
-.. image:: ../../images/darcoms7.jpg
+.. image:: ../../images/darcoms8.jpg
    :alt: darc7
    :class: with-shadow
    :scale: 30
@@ -83,7 +83,7 @@ Visual explanation of the concept
 DARCoMS Benchmarks
 ==============
 
-.. image:: ../../images/darcoms8.jpg
+.. image:: ../../images/darcoms7.jpg
    :alt: darc8
    :align: center
    :class: with-shadow
